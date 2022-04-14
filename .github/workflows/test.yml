@@ -1,0 +1,94 @@
+name: Run e2e Tests on Pull Request
+
+on:
+  pull_request:
+    branches: main
+
+jobs:
+  test:
+    name: Tests Repo E2E
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:focal
+    timeout-minutes: 5
+    steps:
+      - name: Checkout student code from pr 📝
+        uses: actions/checkout@v2
+        with:
+          path: student-code
+
+      - name: Print student code repo contents with python 📉
+        run: |
+          import os
+          print(os.listdir("./student-code"))
+        shell: python
+
+      - name: Print contents of students script file with bash 📉
+        run: cat student-code/script.js
+
+      - name: Install node 🔋
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: Check out Flixter tests private repo 🔐
+        uses: actions/checkout@v3
+        with:
+          repository: Jastor11/codepath-tdd-flixter-playwright-tests
+          path: test-suite
+          token: ${{ secrets.SECRET_PATH }}
+
+      - name: Print the test repo contents with python 📉
+        run: |
+          import os
+          print(os.listdir("./test-suite"))
+        shell: python
+
+      - name: Create the directory where the custom user code will go 🗃
+        run: mkdir test-suite/project/custom
+
+      - name: Move user project into correct tests directory 📥
+        run: |
+          cp -r ./student-code/ ./test-suite/project/custom/
+
+      - name: Print the custom test repo contents with python 📉
+        run: |
+          import os
+          print(os.listdir("./test-suite/project/custom"))
+        shell: python
+
+      - name: Signal installing deps 👀
+        run: |
+          echo "Installing dependencies!"
+          echo "Good luck! 🚀"
+
+      - name: 📥  Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          working-directory: test-suite
+
+      - name: 🚀  Running Tests
+        run: |
+          cd test-suite
+          npm run test:ci
+          cd ..
+        continue-on-error: true
+
+      - name: Print the results of the test from the JSON file 🗄
+        if: ${{ always() }}
+        run: |
+          import json
+          import pprint
+
+          with open("./test-suite/test-results/results.json", "r") as f:
+            data = f.read()
+            pprint.pprint(json.loads(data))
+        shell: python
+        continue-on-error: true
+
+      - name: Upload report artifacts 📠
+        uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: test-results
+          path: ./test-suite/test-results/html-report
+        continue-on-error: true
