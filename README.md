@@ -12,8 +12,8 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 1. Init
 
-   - [ ] connect styles.css and script.js with my html file
-   - [ ] test the connection
+   - [x] connect styles.css and script.js with my html file
+   - [x] test the connection
 
 2. Set up the html structure + CSS
 
