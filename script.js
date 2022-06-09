@@ -31,6 +31,12 @@ async function getNowPlaying (){
     displayResults(resultsData)
 }
 
+async function getResults (apiRequestURL){
+    response = await fetch(apiRequestURL);
+    let resultsData = await response.json();
+    displayResults(resultsData)
+}
+
 //will need to edit this if i want to show more details when they clickor hover on it
 
 function displayResults (resultsData){
@@ -47,17 +53,13 @@ function displayResults (resultsData){
     `
 )}
 
-async function handleSearchFormSubmit (evt){
+function handleSearchFormSubmit (evt){
     evt.preventDefault();
     moviesGrid.innerHTML = ''
-
-    searchTerm = evt.target.search-input.value;
-    searchResults = await getResults(searchTerm);
-    console.log(searchResults);
-    displayResults(searchResults);
-
-    // unhide load more button
-    loadMoreButtonEl.classList.remove("hidden");
+    currentPage = 1;
+    
+    searchTerm = document.getElementById('search-input').value;
+    getResults(BASE_API_URL + "/search/movie" + API_KEY_QUERY + "&query=" + searchTerm)
 }
 
 // need to edit this so that it loads more movies in general, not just the Now Playing
