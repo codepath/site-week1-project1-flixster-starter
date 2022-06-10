@@ -99,12 +99,18 @@ function createMovieCard (movieObject){
  }
  
  async function handleMovieCardClick (evt) {
-    movieID = (evt.target.attributes.movieid.value).slice(6)
+    movieID = (evt.target.attributes.movieid.value).slice(6);
     movieObject = await callAPI(BASE_API_URL + "/movie/" + movieID + API_KEY_QUERY);
     videoDetailsObject = await callAPI(BASE_API_URL + "/movie/" + movieID + "/videos" + API_KEY_QUERY);
   
+    
+    let backdropPath = movieObject.backdrop_path
+    backdropDisplayURL = (backdropPath ? "https://image.tmdb.org/t/p/original"+backdropPath : "https://fl-1.cdn.flockler.com/embed/no-image.svg") 
+
+    // populate popup contents
     popupEl.innerHTML = `
         <div>
+            <img class="movie-header" src="${backdropDisplayURL}">
             <h1>${movieObject.title}</h1>
             <span>★ ${movieObject.vote_average}</span>
             <span class="light-text">/ 10</span"><span>
@@ -124,9 +130,10 @@ function hidePopup (evt) {
 }
  
 async function loadMoreMovies (){
+    console.log('clicked')
     currentPage += 1
     results = await getResults(latestApiCall+"&page=" + currentPage)
-    displayResults(results)
+    displayMovieResults(results)
  }
 
  window.onload = function () {
