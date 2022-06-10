@@ -27,11 +27,18 @@ function display(responseData)
         const image_path = element.poster_path
         console.log(image_path)
         const title = element.title
-        const votes = element.vote_count
+        const votes = element.vote_average
+        console.log(votes)
 
         grid_cont.innerHTML +=
             '<div class="grid-item">' +
-         '<img class= "movie_pic" src= "https://image.tmdb.org/t/p/w500/' + image_path + ' " ' + ' />'+
+        '<img class= "movie_pic" src= "https://image.tmdb.org/t/p/w500/' + image_path + ' " ' + ' />' +
+        '<div class = "rating"> ' +
+        '<div class= "star"> ⭐ ' + 
+        '</div>'+    
+        '<div class= "rat_num" > ' + votes +  
+        '</div>'+    
+        '</div>' +
           '<div class="title">' + title+ '</div>'
             '</div>'
      
