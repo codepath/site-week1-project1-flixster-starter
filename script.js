@@ -45,6 +45,11 @@ function displayMovieResults (resultsData){
     movieResults.forEach( movie => createMovieCard(movie))
 }
 
+async function displayNowPlaying (){
+    movieResults = await getResults(BASE_API_URL + "/movie/now_playing" + API_KEY_QUERY);
+    displayMovieResults(results);
+ }
+
 function createMovieCard (movieObject){
     movieCardID = "movie-"+movieObject.id;
 
@@ -74,68 +79,30 @@ function createMovieCard (movieObject){
     movieCardDiv.addEventListener('click', handleMovieCardClick)
 }
 
- async function displayNowPlaying (){
-    movieResults = await getResults(BASE_API_URL + "/movie/now_playing" + API_KEY_QUERY);
-    displayMovieResults(results);
- }
- 
  async function handleSearchFormSubmit (evt){
     evt.preventDefault();
-     
-    // clear current movies so results show up at the top
     moviesGrid.innerHTML = "";
     currentPage = 1;
- 
-    // grab input from search form
-    searchTerm = document.getElementById('search-input').value;
     
     // display results and show the "close search" button
+    searchTerm = document.getElementById('search-input').value;
     movieResults = await getResults(BASE_API_URL + "/search/movie" + API_KEY_QUERY + "&query=" + searchTerm)
     displayMovieResults(movieResults)
     closeSearchBtn.classList.remove("hidden");
  }
- 
- async function loadMoreMovies (){
-    currentPage += 1
-    results = await getResults(latestApiCall+"&page=" + currentPage)
-    displayResults(results)
- }
- 
+
  function closeSearch (evt){
     moviesGrid.innerHTML = "";
     currentPage = 1;
     displayNowPlaying();
     closeSearchBtn.classList.add("hidden");
  }
-
- async function getMovieDetails (movieID){
-    apiRequestURL = BASE_API_URL + "/movie/" + movieID + API_KEY_QUERY
-    console.log("called URL:", apiRequestURL);
-    
-    let response = await fetch(apiRequestURL);
-    console.log("response:", response)
-    let resultsData = await response.json();
-    console.log("resultsData:", resultsData);
-    
-    return resultsData
-
- }
-
+ 
  async function handleMovieCardClick (evt) {
-    console.log("popup function triggered");
     movieID = (evt.target.attributes.movieid.value).slice(6)
-    movieObject = await getMovieDetails(movieID)
-    console.log(movieObject);
-    
-    // show popup container
-    popupContainer.classList.remove("hidden");
-    popupEl.classList.remove("hidden");
-
-    // get video results
-    videoResults = await getVideoResults(movieID);
-    console.log(videoResults)
-
-    
+    movieObject = await callAPI(BASE_API_URL + "/movie/" + movieID + API_KEY_QUERY);
+    videoDetailsObject = await callAPI(BASE_API_URL + "/movie/" + movieID + "/videos" + API_KEY_QUERY);
+  
     popupEl.innerHTML = `
         <div>
             <h1>${movieObject.title}</h1>
@@ -143,25 +110,25 @@ function createMovieCard (movieObject){
             <span class="light-text">/ 10</span"><span>
         </div>
     `
+    showPopup();
 }
 
-async function getVideoResults(movieID) {
-    apiRequestURL = BASE_API_URL + "/movie/" + movieID + "/videos" + API_KEY_QUERY
-    console.log("called URL:", apiRequestURL);
-    
-    let response = await fetch(apiRequestURL);
-    console.log("response:", response)
-    let resultsData = await response.json();
-    console.log("resultsData:", resultsData);
-    return resultsData
+function showPopup (evt) {
+    popupContainer.classList.remove("hidden");
+    popupEl.classList.remove("hidden");
 }
-
 
 function hidePopup (evt) {
     popupContainer.classList.add("hidden");
     popupEl.classList.add("hidden");
 }
  
+async function loadMoreMovies (){
+    currentPage += 1
+    results = await getResults(latestApiCall+"&page=" + currentPage)
+    displayResults(results)
+ }
+
  window.onload = function () {
     currentPage = 1;
     displayNowPlaying();
