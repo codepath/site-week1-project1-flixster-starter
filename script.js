@@ -1,64 +1,61 @@
-// global constants
+// GLOBAl CONSTANTS
 API_KEY = "7588252b35a0bbe04a7685828388c9e8"
 BASE_API_URL  = "https://api.themoviedb.org/3"
 API_KEY_QUERY = "?api_key=" + API_KEY
  
-// variables
+// VARIABLES
 let searchTerm = "";
 let currentPage = 1;
+let latestApiCall = ""
  
 // DOM selectors
-const closeSearchBtn = document.querySelector("#close-search-btn");
 const moviesGrid = document.querySelector("#movies-grid");
-const loadMoreBtn = document.querySelector("#load-more-movies-btn");
 const searchBtn = document.querySelector("#clicker");
+const closeSearchBtn = document.querySelector("#close-search-btn");
+const loadMoreBtn = document.querySelector("#load-more-movies-btn");
 const popupContainer = document.querySelector("#popup-container");
 const popupEl = document.querySelector("#popup");
- 
- 
-// TESTER
-let latestApiCall = ""
-currentPage = 1
- 
-// event listeners
+
+// EVENT LISTENERS
+searchBtn.addEventListener("click", handleSearchFormSubmit);
 closeSearchBtn.addEventListener("click", closeSearch);
 loadMoreBtn.addEventListener("click", loadMoreMovies);
-searchBtn.addEventListener("click", handleSearchFormSubmit);
 popupContainer.addEventListener("click", hidePopup);
 
-// functions
-async function getResults (apiRequestURL){
-    latestApiCall = apiRequestURL
+
+
+// FUNCTIONS
+
+async function callAPI (apiRequestURL){
     console.log("called URL:", apiRequestURL);
     let response = await fetch(apiRequestURL);
-    console.log("response:", response)
-    let resultsData = await response.json();
-    console.log("resultsData:", resultsData);
-    return resultsData
+    let responseData = await response.json();
+    console.log("responseData:", responseData);
+    return responseData;
 }
 
-function displayResults (resultsData){
-    movieResults = resultsData.results 
+async function getResults (apiRequestURL){
+    latestApiCall = apiRequestURL
+    results = await callAPI(apiRequestURL)
+    return results
+}
+
+function displayMovieResults (resultsData){
+    movieResults = resultsData.results; 
     movieResults.forEach( movie => createMovieCard(movie))
 }
 
 function createMovieCard (movieObject){
     movieCardID = "movie-"+movieObject.id;
-    console.log(movieCardID);
 
     // create new movie card div object
     let movieCardDiv = document.createElement('div');
-    
-    // add movie-card class name
     movieCardDiv.className = "movie-card";
-
-    // append the div to the movies-grid element
     document.getElementById("movies-grid").appendChild(movieCardDiv);
 
+    // get path to poster; if unavailable, supply a default one
     let posterPath = movieObject.poster_path
     posterDisplayURL = (posterPath ? "https://image.tmdb.org/t/p/original"+posterPath : "https://fl-1.cdn.flockler.com/embed/no-image.svg") 
-
-    console.log(posterDisplayURL)
     
     // insert rest of HTML for the div object
     movieCardDiv.innerHTML = `
@@ -78,37 +75,29 @@ function createMovieCard (movieObject){
 }
 
  async function displayNowPlaying (){
-    results = await getResults(BASE_API_URL + "/movie/now_playing" + API_KEY_QUERY);
-    displayResults(results);
+    movieResults = await getResults(BASE_API_URL + "/movie/now_playing" + API_KEY_QUERY);
+    displayMovieResults(results);
  }
  
  async function handleSearchFormSubmit (evt){
-    // prevent from reloading
     evt.preventDefault();
      
     // clear current movies so results show up at the top
     moviesGrid.innerHTML = "";
- 
-    // reset current page to 1
     currentPage = 1;
  
     // grab input from search form
     searchTerm = document.getElementById('search-input').value;
-     
-    let apiRequestURL = BASE_API_URL + "/search/movie" + API_KEY_QUERY + "&query=" + searchTerm
-    results = await getResults(apiRequestURL)
- 
-    displayResults(results)
- 
-    // show close search button
+    
+    // display results and show the "close search" button
+    movieResults = await getResults(BASE_API_URL + "/search/movie" + API_KEY_QUERY + "&query=" + searchTerm)
+    displayMovieResults(movieResults)
     closeSearchBtn.classList.remove("hidden");
- 
  }
  
  async function loadMoreMovies (){
     currentPage += 1
     results = await getResults(latestApiCall+"&page=" + currentPage)
-    console.log(results)
     displayResults(results)
  }
  
