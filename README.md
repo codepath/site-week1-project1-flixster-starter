@@ -37,24 +37,21 @@ Estimated time spent: **10** hours spent in total
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
 ![](https://github.com/annesatran/SITE_Project1_flixster/blob/main/Program1_GIF1.gif)
 Site brings up "Now Playing", and the Load More button works.
 
-![](https://github.com/annesatran/SITE_Project1_flixster/Program1_GIF4.gif)
+![](https://github.com/annesatran/SITE_Project1_flixster/blob/main/Program1_GIF4.gif)
 User can search for movies using a search bar, and the Load More button works.
 
-![](https://github.com/annesatran/SITE_Project1_flixster/Program1_GIF5.gif)
+![](https://github.com/annesatran/SITE_Project1_flixster/blob/main/Program1_GIF5.gif)
 User can clear a search that they made, returning to the Now Playing results.
 
-![](https://github.com/annesatran/SITE_Project1_flixster/Program1_GIF2.gif)
+![](https://github.com/annesatran/SITE_Project1_flixster/blob/main/Program1_GIF2.gif)
 The site is responsive.
 
-![](https://github.com/annesatran/SITE_Project1_flixster/Program1_GIF3.gif)
+![](https://github.com/annesatran/SITE_Project1_flixster/blob/main/Program1_GIF3.gif)
 User can click on any movie cards to bring up a popup.
 
-`ADD_EMBEDDED_CODE_HERE`
 
 ### Reflection
 
