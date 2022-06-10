@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flixster</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+    <div id="popup-container" class="hidden">
+        <div id="popup" class="hidden"></div>
+    </div>
+
+    <div id="header">
+        <h1>Flixster</h1>
+        <form>
+            <input type="text" id="search-input" name="search-input" placeholder="Enter keywords...">
+            <button id='clicker'>Search</button>
+        </form>
+        <button id="close-search-btn" class="hidden">Clear Search</button>
+    </div>
+    <div id="movies-grid"></div>
+    <button id="load-more-movies-btn">Load More</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
