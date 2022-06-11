@@ -52,16 +52,18 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 Add your response here
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-* If i had more time i would implement the stretch features
+* If i had more time i would implement the stretch features. I had problem with the popup. I would like to complete that
   
 Add your response here
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
+
+Add your response here.
 My peers did extra work. I have to get my stuff together and be ready for the internship.
-Add your response here
 
 ### Open-source libraries used
+https://www.loginradius.com/blog/engineering/simple-popup-tutorial/
 
 - Add any links to open-source libraries used in your project.
 
