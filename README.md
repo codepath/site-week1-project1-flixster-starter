@@ -43,7 +43,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 ### Walkthrough Video
 
 `TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-![Alt Text]()
+![Alt Text](https://github.com/EvansAsuboahStetson/flixster_starter/blob/main/Animations.gif)
 `ADD_EMBEDDED_CODE_HERE`
 
 ### Reflection
