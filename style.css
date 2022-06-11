@@ -31,7 +31,7 @@ body{
     
 }
 
-#search_item{
+#search-input{
     border: 1px solid grey;
     border-radius: 5px;
     height: 20px;
@@ -60,12 +60,12 @@ body{
     font-weight:bolder;
 
 }
-.grid-container {
+.movies-grid{
   display: grid;
   grid-template-columns: 320px 320px 320px 320px;
   
 }
-.grid-item{
+.movie-card{
  
   border: 10px solid #040720;
   font-size: 90px;
@@ -75,7 +75,7 @@ body{
   visibility: visible;
   
 }
-.movie_pic{
+.movie-poster{
     display: flex;
     width: 250px;
 }
@@ -86,7 +86,7 @@ body{
     justify-content: center;
     
 }
-#button1 {
+#load-more-movies-btn {
   background-color: black;
   color: white;
   text-align: center;
@@ -109,11 +109,11 @@ body{
 .star{
    font-size: 25px;
 }
-.rat_num{
+.movie-votes{
     margin-top: 8px;
     font-size: 25px;
 }
-.title{
+.movie-title{
     color: white;
     font-size: 20px;
     text-align: center;
@@ -134,6 +134,11 @@ body{
     height: 100vh;
     align-items: center;
     position: absolute;
+    
+}
+.close-search-btn{
+    visibility: hidden;
+    cursor: pointer;
     
 }
 #overlay {

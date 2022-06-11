@@ -6,8 +6,8 @@ var innerHTM = ''
 
 //https://api.themoviedb.org/3/movie/550?api_key={api_key}&callback=test
 let page_Num = 1
-const grid_cont = document.querySelector('.grid-container')
-const search_bar = document.getElementById('search_item')
+const grid_cont = document.querySelector('.movies-grid')
+const search_bar = document.getElementById('search-input')
 
 async function getMovie_data(page_Num) {
   const api_url =
@@ -25,7 +25,7 @@ async function getAllMovies() {
   console.log(responseData)
   display(responseData)
 }
- function display(responseData) {
+function display(responseData) {
   if (responseData) {
     responseData.results.forEach((element) => {
       var image_path = ''
@@ -38,15 +38,15 @@ async function getAllMovies() {
       const title = element.title
       const votes = element.vote_average
 
-       grid_cont.innerHTML += `
+      grid_cont.innerHTML += `
       
-      <div class= "grid-item" id="${id}">
-      <img class= "movie_pic" src= "https://image.tmdb.org/t/p/w500/${image_path}"/>
+      <div class= "movie-card" id="${id}">
+      <img class= "movie-poster" src= "https://image.tmdb.org/t/p/w500/${image_path}"/>
       <div class = "rating">
       <div class= "star">⭐</div>
-      <div class= "rat_num"> ${votes}</div>
+      <div class= "movie-votes"> ${votes}</div>
       </div>
-      <div class="title">${title}</div>
+      <div class="movie-title">${title}</div>
       </div>
       `
     })
@@ -56,15 +56,7 @@ async function getAllMovies() {
 
 //#\33
 
-function popUp() {
-    
-  nav.insertAdjacentHTML(
-    'beforebegin',
-    `<div class="demo-popup-wrapper">
-    <div class="demo-popup"></div>
-    </div>`,
-  )
-}
+
 
 async function getSearchMovies(evt) {
   const user_input = search_bar.value
@@ -123,9 +115,11 @@ async function LoadMore(evt) {
   console.log(load_data)
   display(load_data)
 }
-const search_icon = document
-  .querySelector('.search_icon')
-  .addEventListener('click', displaySearch)
+const search_icon = document.querySelector('.search_icon').addEventListener('click', displaySearch)
+
+const back_button = document.querySelector('.close-search-btn')
+
+back_button.addEventListener('click',backFunc)
 
 function displaySearch(evt) {
   evt.preventDefault()
@@ -133,19 +127,35 @@ function displaySearch(evt) {
   let visibility = window.getComputedStyle(search_bar).visibility
 
   if (visibility == 'hidden') {
-    search_bar.setAttribute('style', 'visibility : visible')
+      search_bar.setAttribute('style', 'visibility : visible')
+      back_button.setAttribute('style','visibility:visible')
+      
   }
 }
-document.addEventListener('mouseup', function (e) {
-  var container = this.getElementById('search_item')
-  if (!container.contains(e.target)) {
-    container.setAttribute('style', 'visibility : hidden')
-  }
-})
+
+function backFunc(evt)
+{
+    evt.preventDefault()
+    search_bar.value = ""
+     search_bar.setAttribute('style', 'visibility : hidden')
+    back_button.setAttribute('style', 'visibility:hidden')
+    myFunction()
+    
+}
+search_bar.addEventListener("keyup",
+   function(event) {
+      if (!event) {
+         var event = window.event;
+      }
+         event.preventDefault();
+      if (event.keyCode == 13){
+         myFunction()
+      }
+   }, false)
 
 window.onload = async function () {
   // execute your functions here to make sure they run as soon as the page loads
 
   getAllMovies()
 }
-document.getElementById('button1').addEventListener('click', LoadMore)
+document.getElementById('load-more-movies-btn').addEventListener('click', LoadMore)
