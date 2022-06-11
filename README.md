@@ -41,23 +41,24 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 - [x ] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthrough Video
-
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
 ![Alt Text](https://github.com/EvansAsuboahStetson/flixster_starter/blob/main/Animations.gif)
-`ADD_EMBEDDED_CODE_HERE`
+
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
+* Most of the the topics  were implemented. The api calls and also the styling as well. 
 
 Add your response here
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+* If i had more time i would implement the stretch features
   
 Add your response here
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
+My peers did extra work. I have to get my stuff together and be ready for the internship.
 Add your response here
 
 ### Open-source libraries used
@@ -65,5 +66,6 @@ Add your response here
 - Add any links to open-source libraries used in your project.
 
 ### Shout out
+Hout out to Baffour and Snigdha for helping me out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
