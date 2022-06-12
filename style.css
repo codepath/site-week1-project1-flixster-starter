@@ -1,1 +1,209 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #040720;
+    color: white;
 
+}
+.header{
+    display: flex;
+    background-color: #040720;
+    margin-top: 20px;
+    padding: 40px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.search{
+      
+  float: right;
+  margin-right: 20px;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+
+}
+
+.search_icon{
+    margin-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+      
+    
+}
+
+#search-input{
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 20px;
+    outline: 0;
+    margin-right: 10px;
+    background-color: #f5f5f5;
+    visibility: hidden;
+    
+}
+.header_write{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.pop_corn{
+    padding: 5px;
+}
+.nowPlaying{
+    margin-top: 10px;
+    padding: 10px;
+    margin-left: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight:bolder;
+
+}
+.movies-grid{
+  display: grid;
+  grid-template-columns: 320px 320px 320px 320px;
+  
+}
+.movie-card{
+ 
+  border: 10px solid #040720;
+  font-size: 90px;
+  text-align: center;
+  margin: 20px;
+  color: aqua;
+  visibility: visible;
+  
+}
+.movie-poster{
+    display: flex;
+    width: 250px;
+}
+.bottom {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#load-more-movies-btn {
+  background-color: black;
+  color: white;
+  text-align: center;
+  align-content: center;
+  width: 80px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+  cursor: pointer;
+  
+
+}
+.rating {
+    display: flex;
+     align-items: center;
+    justify-content: center;
+   
+}
+.star{
+   font-size: 25px;
+}
+.movie-votes{
+    margin-top: 8px;
+    font-size: 25px;
+}
+.movie-title{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+    
+}
+.demo-popup{
+
+    width: 500px;
+    height: 600px;
+    position: fixed;
+    border-radius: 15px;
+   background-color: #040720;
+   border: 10px;
+   
+
+    
+}
+.demo-popup-wrapper{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    position: absolute;
+		opacity: 0.8;
+	
+    
+}
+.demo-popup-wrapper .trailer{
+    opacity: 1;
+}
+.close-search-btn{
+    visibility: hidden;
+    cursor: pointer;
+    
+}
+
+.details{
+    align-items: center;
+    align-content: center;
+    margin: 10px;
+   
+
+}
+.popup-title{
+    padding: 5px;
+    margin: 6px;
+    letter-spacing: 2px;
+}
+.popup-star{
+    padding: 5px;
+    margin: 5px;
+    letter-spacing: 2px;
+}
+.popup-release_Info{
+    padding: 5px;
+    margin: 5px;
+    letter-spacing: 2px;
+
+}
+.popup-rating{
+   padding: 5px;
+    margin: 5px;
+    letter-spacing: 2px;
+
+}
+.overview{
+    padding: 5px;
+    margin: 5px;
+    letter-spacing: 2px;
+
+}
+.popup-tagline{
+    padding: 5px;
+    margin: 5px;
+    letter-spacing: 2px;
+
+}
+
+#closeup{
+		float: right;
+		padding: 5px;
+		cursor: pointer;
+        margin-right: 10px;
+	}
+
+.trailer_title{
+    margin: auto;
+    width: 10%;
+    padding: 10px;
+    letter-spacing: 2px;
+}
