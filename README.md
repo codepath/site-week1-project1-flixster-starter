@@ -41,7 +41,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 - [x] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthrough Video
-![Alt Text](https://github.com/EvansAsuboahStetson/flixster_starter/blob/main/Animation.gif)
+![Alt Text](https://github.com/EvansAsuboahStetson/flixster_starter/blob/main/Preview.gif)
 
 
 ### Reflection
