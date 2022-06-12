@@ -37,8 +37,8 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 - [ ] Deploy website using GitHub Pages. 
 - [x] Allow user to view more details about a movie within a popup.
 - [ ] Improve the user experience through CSS & animation.
-- [ ] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
-- [x ] Implement anything else that you can get done to improve the app functionality!
+- [x] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
+- [x] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthrough Video
 ![Alt Text](https://github.com/EvansAsuboahStetson/flixster_starter/blob/main/Animation.gif)
@@ -52,7 +52,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 Add your response here
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-* If i had more time i would implement the stretch features. I had problem with the popup. I would like to complete that
+* If i had more time i would implement the stretch features. I would on on different genres and also suggested movies
   
 Add your response here
 
