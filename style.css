@@ -123,9 +123,9 @@ body{
 .demo-popup{
 
     width: 500px;
-    height: 500px;
-   position: fixed;
-   border-radius: 15px;
+    height: 600px;
+    position: fixed;
+    border-radius: 15px;
    background-color: #040720;
    border: 10px;
    
@@ -143,6 +143,9 @@ body{
 	
     
 }
+.demo-popup-wrapper .trailer{
+    opacity: 1;
+}
 .close-search-btn{
     visibility: hidden;
     cursor: pointer;
@@ -152,48 +155,55 @@ body{
 .details{
     align-items: center;
     align-content: center;
-    margin: 30px;
+    margin: 10px;
    
 
 }
 .popup-title{
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 6px;
     letter-spacing: 2px;
 }
 .popup-star{
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
     letter-spacing: 2px;
 }
 .popup-release_Info{
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
     letter-spacing: 2px;
 
 }
 .popup-rating{
-   padding: 10px;
-    margin: 10px;
+   padding: 5px;
+    margin: 5px;
     letter-spacing: 2px;
 
 }
 .overview{
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
     letter-spacing: 2px;
 
 }
 .popup-tagline{
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
     letter-spacing: 2px;
 
 }
 
 #closeup{
 		float: right;
-		padding: 10px;
+		padding: 5px;
 		cursor: pointer;
         margin-right: 10px;
 	}
+
+.trailer_title{
+    margin: auto;
+    width: 10%;
+    padding: 10px;
+    letter-spacing: 2px;
+}

@@ -160,23 +160,24 @@ function display(responseData) {
   }
 }
 async function getMovieDetails(id) {
-  const apiUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}`
+  const apiUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${api_key}&append_to_response=videos`
 
   let response = await fetch(apiUrl)
 
   let responseData = await response.json()
 
   var element = document.querySelector('.demo-popup-wrapper')
-  console.log(element)
+  console.log(responseData)
 
-  if (element != null)
-  {
-    console.log("nullooo")
+  if (element != null) {
+    console.log('nullooo')
     element.parentNode.removeChild(element)
   }
+  console.log(responseData.video)
 
-  document.querySelector('.navigation').insertAdjacentHTML('beforebegin',
-  `<div class="demo-popup-wrapper" >
+  document.querySelector('.navigation').insertAdjacentHTML(
+    'beforebegin',
+    `<div class="demo-popup-wrapper" >
   <div class="demo-popup">
     <div class="popupcontrols">
      <span id="closeup">❌</span>
@@ -187,18 +188,24 @@ async function getMovieDetails(id) {
   <div class="popup-release_Info">Release Info: ${responseData.release_date}</div>
   <div class="overview"> Overview: ${responseData.overview}</div>
   <div class="popup-tagline"> Tagline: ${responseData.tagline}</div>
+  <div class= "trailer">
+  <div class="trailer_title">Trailer</div>
+  <div>
+  <iframe width="470" height="205" src="https://www.youtube.com/embed/${responseData.videos.results[0].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   </div>
- 
+  </div>
+  </div>
   </div>
 
-  `
-  );
-  const popupclose = document.getElementById("closeup").addEventListener("click", closefunc)
-  
-  function closefunc()
-  {
+  `,
+  )
+  const popupclose = document
+    .getElementById('closeup')
+    .addEventListener('click', closefunc)
+
+  function closefunc() {
     var element = document.querySelector('.demo-popup-wrapper')
-     element.parentNode.removeChild(element)
+    element.parentNode.removeChild(element)
   }
 }
