@@ -1,1 +1,72 @@
+body {
+    background-image: linear-gradient(to bottom right, black, rgb(84, 0, 92));
+    background-attachment: fixed;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
 
+.icon {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#header-box {
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: horizontal;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+}
+
+.header {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 40px;
+}
+
+#movie-results {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
+.movie-box{
+    display: flex;
+    flex-basis: 100%;
+    margin: 30px; 
+    padding: 30px;
+    border: rgb(91, 72, 93);
+    border-style: dashed;
+    flex-direction: column;
+    max-width: 300px;
+    flex-wrap: wrap;
+}
+
+.movie-img {
+    max-width: 280px;
+}
+
+.movie-text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.votes {
+    font-size: 20px;
+    margin-bottom: 0px;;
+}
+
+.fa-star {
+    color: gold;
+    margin-right: 10px;
+}
+
+.movie-title {
+    margin-top: 6px;
+    font-size: 25px;
+}
