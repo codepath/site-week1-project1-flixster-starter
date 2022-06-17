@@ -96,8 +96,6 @@ async function getMoreInfo(movie_id, movie_card){
         <p class = "overview">${results.overview}</>
         <div class = "genres">${genreHtml}</div>
     `
-
-    console.log(movie_card)
 }
 
 async function insertMovie (title, src, votes, movie_id){
