@@ -32,9 +32,11 @@ async function fetchMovies(){
     }
 }
 
-function showMoreInfo (event){
+async function showMoreInfo (event){
     event.preventDefault()
-    var movieCardElement = event.path[event.path.length - 6]
+    var movieCardElement = event.composedPath()[event.composedPath().length - 6]
+
+    await getMoreInfo(movieCardElement.getAttribute("data-id"), movieCardElement)
     
     const moreMovieInfoElement = movieCardElement.children[2]
     const allMovieCards = document.getElementsByClassName('movie-card')
@@ -75,9 +77,7 @@ async function getMoreInfo(movie_id, movie_card){
     const vid_results = await vid_response.json()
 
     if (vid_results["results"] && vid_results["results"][0] && vid_results["results"][0].key){
-        var vid_url = "https://www.youtube.com/embed/"
-
-        vid_url += vid_results["results"][0].key
+        var vid_url = `https://www.youtube.com/embed/${vid_results["results"][0].key}`
 
         leftBox.innerHTML += `<iframe id="ytplayer" class="video" type="text/html" src="${vid_url}" frameborder="0"></iframe>`
     }
@@ -96,11 +96,13 @@ async function getMoreInfo(movie_id, movie_card){
         <p class = "overview">${results.overview}</>
         <div class = "genres">${genreHtml}</div>
     `
+
+    console.log(movie_card)
 }
 
 async function insertMovie (title, src, votes, movie_id){
     movieResultsElement.innerHTML += 
-    `<div class = "movie-card">
+    `<div class = "movie-card" data-id="${movie_id}">
         <img src="${src}" class = "movie-poster">
         
         <div class = "movie-text">
@@ -122,9 +124,8 @@ async function insertMovie (title, src, votes, movie_id){
     `
 
     var cards = movieResultsElement.getElementsByClassName('movie-card')
-    await getMoreInfo(movie_id, cards[(cards.length - 1)])
     for (let i = 0; i < cards.length; i++){
-        cards[i].addEventListener('click', showMoreInfo)
+        cards[i].addEventListener('click', await showMoreInfo)
     }
 }
 

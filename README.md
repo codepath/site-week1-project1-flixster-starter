@@ -4,9 +4,9 @@
 
 Submitted by: Kimberly Truong
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **14** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site](https://kimberlytruong.github.io/flixster_starter/)
 
 ### Application Features
 
@@ -58,7 +58,7 @@ I think I had enough time. I was able to finish all the core functionality in a 
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-My project demo went well. There 
+My project demo went well. I'm still a bit confused about some of the errors I'm getting, but they have been significantly reduced from before and all the functionality of my website works. I'd like to look over those errors if I have time later on.
 ### Open-source libraries used
 
 - Add any links to open-source libraries used in your project.
