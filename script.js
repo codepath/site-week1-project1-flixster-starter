@@ -36,7 +36,11 @@ async function showMoreInfo (event){
     event.preventDefault()
     var movieCardElement = event.composedPath()[event.composedPath().length - 6]
 
-    await getMoreInfo(movieCardElement.getAttribute("data-id"), movieCardElement)
+    if (movieCardElement.getAttribute("data-id") != ''){
+        // We only fetch the data once
+        await getMoreInfo(movieCardElement.getAttribute("data-id"), movieCardElement)
+        movieCardElement.setAttribute("data-id", '')
+    }
     
     const moreMovieInfoElement = movieCardElement.children[2]
     const allMovieCards = document.getElementsByClassName('movie-card')
