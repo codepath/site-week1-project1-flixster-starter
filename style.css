@@ -3,6 +3,9 @@ body {
     background-attachment: fixed;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .icon {
@@ -27,14 +30,14 @@ body {
     font-size: 40px;
 }
 
-#movie-results {
+#movies-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     flex-basis: 100%;
 }
 
-.movie-box{
+.movie-card{
     display: flex;
     flex-basis: 100%;
     margin: 30px; 
@@ -46,7 +49,7 @@ body {
     flex-wrap: wrap;
 }
 
-.movie-img {
+.movie-poster {
     max-width: 280px;
 }
 
@@ -56,7 +59,7 @@ body {
     flex-direction: column;
 }
 
-.votes {
+.movie-votes {
     font-size: 20px;
     margin-bottom: 0px;;
 }
@@ -69,4 +72,49 @@ body {
 .movie-title {
     margin-top: 6px;
     font-size: 25px;
+}
+
+#search-bar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    flex: 0.9;
+}
+
+#search-input {
+    opacity: 60%;
+    height: 30px;
+    flex: 5;
+}
+
+.search-button {
+    height: 36px;
+    width: 36px;
+    margin: 5px;
+}
+
+
+#load-more-movies-btn {
+  background-color: rgb(91, 72, 93);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#load-more-movies-btn:hover {
+    opacity: 1
 }
