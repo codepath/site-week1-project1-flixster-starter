@@ -47,6 +47,12 @@ body {
     flex-direction: column;
     max-width: 300px;
     flex-wrap: wrap;
+    /* position: relative; */
+}
+
+.movie-card:hover{
+    box-shadow: 7px 12px #888888;
+    cursor: pointer;
 }
 
 .movie-poster {
@@ -116,5 +122,61 @@ body {
 }
 
 #load-more-movies-btn:hover {
-    opacity: 1
+    opacity: 1;
+    cursor: pointer;
+}
+
+.overlay {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute; /* Sit on top of the page content */
+    width: 60%;
+    height: 60%;
+    position: fixed;
+    top: 25%;
+    left: 20%;
+    margin-left:auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.869); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  }
+
+.overlay-left {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin: 8px;
+    flex: 5;
+}
+
+.overlay-right {
+    margin: 8px;
+    flex: 4;
+    overflow: scroll;
+}
+
+.hidden {
+    display: none;
+}
+
+.video {
+    flex: 1;
+}
+
+.genres {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 0px;
+}
+
+.genre-tag {
+    display: flex;
+    align-items: center;
+    border:rgba(0, 0, 0, 0.869);
+    border-radius: 26%;
+    padding: 6px;
+    margin-right: 20px;
+    background-color:rgb(84, 0, 92);
+    font-size: 13px;
 }
