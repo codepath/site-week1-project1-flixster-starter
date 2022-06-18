@@ -42,9 +42,7 @@ Deployed Application (optional): [Flixster Deployed Site](https://kimberlytruong
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
+`<img src = "demo.gif" type = "gif" class = "gif">`
 
 ### Reflection
 
@@ -66,3 +64,4 @@ My project demo went well. I'm still a bit confused about some of the errors I'm
 ### Shout out
 
 Yilika was super helpful when I ran into tons of issues with formatting my website!
+
