@@ -73,7 +73,7 @@ async function getMoreInfo(movie_id, movie_card){
     leftBox.innerHTML =    ``
 
     if (results.backdrop_path != null){
-        leftBox.innerHTML += `<img src="${BASE_URL + results.backdrop_path}">`
+        leftBox.innerHTML += `<img src="${BASE_URL + results.backdrop_path}" alt = "Backdrop for ${movie_card.getElementsByClassName('movie-title')[0].innerHTML}">`
     }
 
     
@@ -105,7 +105,7 @@ async function getMoreInfo(movie_id, movie_card){
 async function insertMovie (title, src, votes, movie_id){
     movieResultsElement.innerHTML += 
     `<div class = "movie-card" data-id="${movie_id}">
-        <img src="${src}" class = "movie-poster">
+        <img src="${src}" class = "movie-poster" alt = "Movie poster for ${title}">
         
         <div class = "movie-text">
             <p class = "movie-votes"><i class="fa-solid fa-star"></i>${votes}</p>
