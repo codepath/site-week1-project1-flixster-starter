@@ -59,7 +59,7 @@ I think I had enough time. I was able to finish all the core functionality in a 
 My project demo went well. I'm still a bit confused about some of the errors I'm getting, but they have been significantly reduced from before and all the functionality of my website works. I'd like to look over those errors if I have time later on.
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+No open-source libraries were used.
 
 ### Shout out
 
