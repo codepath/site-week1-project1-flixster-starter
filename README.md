@@ -42,7 +42,7 @@ Deployed Application (optional): [Flixster Deployed Site](https://kimberlytruong
 
 ### Walkthrough Video
 
-```<img src = "demo.gif" type = "gif" class = "gif">```
+<!DOCTYPE html><img src = "demo.gif" type = "gif" class = "gif"></html>
 
 ### Reflection
 
