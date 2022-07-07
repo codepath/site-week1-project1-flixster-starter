@@ -20,6 +20,7 @@ async function getMovies(PAGE) {
       PAGE
   );
 
+  // second test
   data = await result.json();
 
   // details under each movie card
