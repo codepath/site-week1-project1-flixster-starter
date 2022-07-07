@@ -11,7 +11,8 @@ let list_of_movies = [];
 let PAGE = 1;
 let moviesShowing = true;
 
-// functions
+// test-branch-a changes
+// functions 
 async function getMovies(PAGE) {
   const result = await fetch(
     "https://api.themoviedb.org/3/movie/now_playing?api_key=" +
