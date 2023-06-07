@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marley's Flixter</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Marley's Flixter</h1>
+    <form id="search-form">
+        <label for="search">Search for a Movie!</label>
+        <br><br>
+
+        <input type="text" name="search" placeholder="Movie Title Here" required/>
+        <button type="submit" id="search-button">Search</button>
+    </form>
+
+    <section class="movies-grid">
+        <section class="movie-card">
+            <img class="movie-poster" src="" />
+            <div class="movie-votes">
+                <span class="star">⭐️</span>
+                <span class="title"></span> 
+            </div>
+            <div class="movie-title"></div>
+        </section>
+    </section>
+
+
+
+    <script src="data.js"></script>
+</body>
+</html>
