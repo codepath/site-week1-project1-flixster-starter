@@ -102,8 +102,13 @@ function generateCards(movieObject){
     image.src = "https://image.tmdb.org/t/p/w342"+movieObject.poster_path;
     document.body.insertBefore(image, averageContainer);
 
+    let name = document.createElement('div');
+    name.classList.add('name');
+    name.innerText = movieObject.original_title;
+    document.body.insertBefore(name, averageContainer.nextSibling);
+
 
 }
 
-console.log(firstMovie)
+
 generateCards(firstMovie);
