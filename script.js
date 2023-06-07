@@ -74,3 +74,7 @@ let fakeMoviesAPI = {
         "total_pages": 98,
         "total_results": 1951
     }
+
+let firstMovie = fakeMoviesAPI.results[0] 
+console.log(fakeMoviesAPI.results[0])
+
