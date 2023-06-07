@@ -107,12 +107,28 @@ function generateCards(movieObj){
     image.src= 'https://image.tmdb.org/t/p/w342' + movieObj.poster_path
     document.body.insertBefore(image, avgContainer)
 
+
+    //create name
+    let name= document.createElement('div')
+    name.classList.add('name')
+    name.innerHTML= movieObj.original_title
+    document.body.insertBefore(name, avgContainer.nextSibling)
+
+    //create movie
+    let movie= document.createElement('section')
+    movie.classList.add('movie')
+    movie.appendChild(image)
+    movie.appendChild(avgContainer)
+    movie.appendChild(name)
+    document.body.appendChild(movie)
     
 }
 
+let movies= fakeMoviesAPI.results
+for (const movie of movies){
+    generateCards(movie)
 
-
-generateCards(movie)
+}
 
 
 

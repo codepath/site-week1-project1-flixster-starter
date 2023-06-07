@@ -1,1 +1,15 @@
+.movie{
+    background-color: black;
+}
 
+.rating{
+    color: white;
+}
+
+img{
+    padding: 10px;
+}
+
+.name{
+    color: white;
+}
