@@ -95,19 +95,24 @@ function generateCards(movieObject){
     avgContainer.classList.add('movie-votes')
     avgContainer.appendChild(star);
     avgContainer.appendChild(rating);
-    document.body.appendChild(avgContainer);
 
     // create img
     let img = document.createElement('img')
     img.classList.add('movie-poster');
     img.src = "https://image.tmdb.org/t/p/w342" + movieObject.poster_path;
-    document.body.insertBefore(img, avgContainer)
 
     // create title
     let title = document.createElement('div')
     title.classList.add('movie-title')
     title.innerText = movieObject.original_title
-    document.body.insertBefore(title, avgContainer.nextSibling)
+
+    // create movie container
+    let movieContainer = document.createElement('section')
+    movieContainer.classList.add('movie-card')
+    movieContainer.appendChild(img)
+    movieContainer.appendChild(avgContainer)
+    movieContainer.appendChild(title)
+    document.body.appendChild(movieContainer)
 }
 
 // generateCards(firstMovie);
