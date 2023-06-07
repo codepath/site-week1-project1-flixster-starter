@@ -74,3 +74,35 @@ let fakeMovies = {
 }
 
 console.log(fakeMovies.results[0])
+
+firstMovie = fakeMovies.results[0];
+
+function generateCards(movieObject){
+    // creates star
+    let star = document.createElement('span');
+    star.classList.add('star');
+    let starContent = document.createTextNode("⭐️");
+    star.appendChild(starContent);
+
+    // creates rating
+    let rating = document.createElement('span');
+    rating.classList.add('rating')
+    let ratingContent = document.createTextNode(movieObject.vote_average);
+    star.appendChild(ratingContent);
+
+    // create container for rating
+    let avgContainer = document.createElement('div');
+    avgContainer.classList.add('movie-votes')
+    avgContainer.appendChild(star);
+    avgContainer.appendChild(rating);
+    document.body.appendChild(avgContainer);
+
+    // create img
+    let img = document.createElement('img')
+    img.classList.add('movie-poster');
+    img.src = "https://image.tmdb.org/t/p/w342" + movieObject.poster_path;
+    document.body.insertBefore(img, avgContainer)
+
+}
+
+generateCards(firstMovie);
