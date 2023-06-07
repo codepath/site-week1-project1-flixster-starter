@@ -76,7 +76,7 @@ let fakeMoviesAPI= {
 
 
 
-
+console.log(fakeMoviesAPI.results[0])
 
 
 
