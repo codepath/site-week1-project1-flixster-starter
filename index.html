@@ -10,13 +10,13 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>🍿 Flixster 🎞️ </h1> 
+    <h1>☁️🍿 Flixster 🎞️ ☁️</h1> 
 
 
         <form id = "search-form">
-            <label for="search" name = "search">Search</label><br>
+            <label id = "search-label" for="search" name = "search">Search</label><br>
             <input type="text" name="search-input" id="search-input" required><br><br>
-            <button type = "sumbit">Submit</button>
+            <button id="submit" type = "sumbit">Submit</button>
         </form><br>
 
         <section id="movie-grid">
@@ -30,8 +30,12 @@
 
             </section> -->
 
-
         </section>
+
+        <div id="load-div">
+        <button id="load-more-movies-btn">Load More</button>
+        </div>
+
 
 </body>
 </html>

@@ -1,5 +1,6 @@
 
 // Global constants
+let APIpage = 1;
 
 // function gets movies from API
 function getMovies(){
@@ -11,7 +12,7 @@ function getMovies(){
         }
       };
       
-      fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
+      fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=' + APIpage.toString(), options)
         .then(response => response.json())
         .then((data) => {
             console.log(data)
@@ -474,6 +475,7 @@ function generateCards(movieObject){
     let movie = document.createElement('section');
     movie.classList.add('movie-card');
     movie.appendChild(image);
+    movie.setAttribute("id", movieObject.id)
     movie.appendChild(averageContainer);
     movie.appendChild(title);
     // select flexbox item and add movie as items
@@ -491,4 +493,11 @@ function generateCards(movieObject){
 
 // call function to get movies from API
 getMovies();
+
+let loadMore = document.getElementById("load-more");
+
+loadMore.addEventListener('click', () => {
+    APIpage++;
+    getMovies();
+})
 

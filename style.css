@@ -1,9 +1,9 @@
 body{
-    background: linear-gradient(-45deg,rgb(221, 171, 21),rgb(120, 202, 120),rgb(98, 250, 255),rgb(86, 6, 122));
+    background: linear-gradient(-45deg,rgb(198, 219, 240),rgb(174, 209, 230),rgb(160, 196, 226),rgb(133, 199, 222));
     background-size: 400% 400%;
     width: 100%;
     height: 100%;
-    animation: animate 12s ease infinite;
+    animation: animate 1s ease infinite;
 }
 
 @keyframes animate {
@@ -31,6 +31,19 @@ h1{
     text-align: center;
 }
 
+#search-label{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    color: black;
+}
+#search-input{
+    border-radius: 20px;
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
 .average{
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 }
@@ -43,14 +56,32 @@ h1{
 .movie-card{
     text-align: center;
 }
-button{
+#submit{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size:medium;
-    padding: 10px;
+    font-size: 15px;
+    padding: 15px;
     border-radius: 25px;
     border: 0;
     background-color: white;
 }
+
 button:hover{
     cursor: pointer;
+}
+
+#load-more-movies-btn{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 25px;
+    border: 0;
+    color:white;
+    background-color: black;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+}
+
+#load-div{
+    width: 100%;
 }
