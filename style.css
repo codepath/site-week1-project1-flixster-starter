@@ -1,1 +1,38 @@
+body {
+    /*background-color: black;*/
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
+ 
+}
+  
+h1{
+    color: white;
+    text-align: center;
+    font-size: 75px;
+}
+
+section {
+    color: white;
+}
+
+.movieContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+
+/*.movie {
+    height: 70px;
+    width: 70;
+}*/
+
+
+.averageContainer {
+    text-align: center;
+}
+
+.name {
+    text-align: center;
+}

@@ -73,7 +73,10 @@ let fakeMoviesAPI = {
     "total_results": 1951
 }
 let firstMovie = fakeMoviesAPI.results[0]
-console.log(fakeMoviesAPI.results[0].adult)
+
+let movieContainer = document.createElement('div');
+document.body.appendChild(movieContainer);
+movieContainer.classList.add('movieContainer');
 
  //create star
  function generateCards(movieObject) {
@@ -112,6 +115,9 @@ movie.appendChild(image);
 movie.appendChild(averageContainer);
 movie.appendChild(name);
 document.body.appendChild(movie);
+
+const parent = document.querySelector(".movieContainer");
+parent.appendChild(movie);
 
  }
 
