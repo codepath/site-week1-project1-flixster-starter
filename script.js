@@ -74,5 +74,46 @@ let fakeMoviesAPI = {
 }
 
 let firstMovie = fakeMoviesAPI.results[0]
-
 console.log(fakeMoviesAPI.results[0].adult)
+
+function generateCard(movieAPI){
+    //create star
+    let star = document.createElement('span')
+    let starContent = document.createTextNode("⭐️")
+    star.appendChild(starContent)
+    star.classList.add("star")
+
+    //create rating
+    let rating = document.createElement('span')
+    let ratingContent = document.createTextNode(movieAPI.vote_average)
+    rating.appendChild(ratingContent)
+    rating.classList.add("rating")
+
+    //create average container
+    let averageContainer = document.createElement('div')
+    averageContainer.appendChild(star)
+    averageContainer.appendChild(rating)
+    // document.body.appendChild(averageContainer)
+    averageContainer.classList.add("average")
+
+    //create image
+    let image = document.createElement('img')
+    image.src = "https://image.tmdb.org/t/p/w342" + movieAPI.poster_path
+    // document.body.insertBefore(image, averageContainer)
+
+    //create movie-name
+    let movieName = document.createElement('div')
+    movieName.classList.add('movie-name')
+    movieName.innerText = movieAPI.original_title
+    // document.body.insertBefore(movieName, averageContainer.nextSibling)
+
+
+    let movie = document.createElement('section')
+    movie.classList.add('movie')
+    movie.appendChild(image)
+    movie.appendChild(averageContainer)
+    movie.appendChild(movieName)
+    document.body.appendChild(movie)
+}
+
+generateCard(firstMovie)
