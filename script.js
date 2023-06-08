@@ -117,11 +117,12 @@ function generateCards(movieObject){ // function that will generate the movie ca
 
     //create movie section
     let movie = document.createElement('section');
-    movie.classList.add('movie')
     movie.appendChild(image)
     movie.appendChild(averageContainer)
     movie.appendChild(name)
     document.body.appendChild(movie)
+    movie.classList.add('movie')
+
 
 
 }
@@ -139,3 +140,16 @@ for (let i = 0; i<3; i++){
     generateCards(fakeMoviesAPI.results[i]);
 
 }
+
+// // create movie container
+
+// let movieContainer = document.createElement('section');
+// movieContainer.classList.add('movieContainer')
+// for (let i = 0; i<3; i++){
+
+//     movieContainer.appendChild(generateCards(fakeMoviesAPI.results[i])) ;
+
+// }
+// document.body.appe
+
+
