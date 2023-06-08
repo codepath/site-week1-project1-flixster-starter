@@ -3,3 +3,16 @@ h1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 50px;
 }
+
+#movie-grid{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+#search-form{
+    text-align: center;
+}

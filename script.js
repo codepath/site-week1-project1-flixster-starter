@@ -115,10 +115,14 @@ function generateCards(movieObject){
     movie.appendChild(image);
     movie.appendChild(averageContainer);
     movie.appendChild(name);
-    document.body.appendChild(movie);
+    let grid = document.querySelector("#movie-grid");
+    grid.appendChild(movie);
 
 
 }
 
-generateCards(firstMovie);
+for (let i = 0; i < fakeMoviesAPI.results.length; i++) {
+    generateCards(fakeMoviesAPI.results[i]);
+  }
+//generateCards(firstMovie);
 
