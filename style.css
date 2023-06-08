@@ -29,11 +29,31 @@
     
   }
   
-  .movieContainer {
-    align-items: flex-start; 
-    height: 40vh;
-    width: 80%;
+  .movie-card {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 0 0 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: calc(100% * (1/4) - 10px - 1px);
+    margin-bottom: 30px;
     background-color:brown;
-    margin: 0 auto;
+  }
+
+  .movie-poster {
+    flex-grow:0;
+    flex-shrink:0;
+    width: 100%;
+  }
+
+  #search-button{
+    background-color: indianred;
+    cursor: pointer;
+  }
+
+
+  #search-button:active{
+    background-color: bisque;
   }
   

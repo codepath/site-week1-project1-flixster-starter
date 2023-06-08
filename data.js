@@ -67,7 +67,91 @@ let fakeMovies = {
             "video": false,
             "vote_average": 7.1,
             "vote_count": 854
-        },
+        }
+        ,
+        {
+            "adult": false,
+            "backdrop_path": "/4t0oBFrJyweYPt0hocW6RUa0b6H.jpg",
+            "genre_ids": [
+                28,
+                80,
+                53
+            ],
+            "id": 385687,
+            "original_language": "en",
+            "original_title": "Fast X",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.",
+            "popularity": 2334.66,
+            "poster_path": "/1E5baAaEse26fej7uHcjOgEE2t2.jpg",
+            "release_date": "2023-05-17",
+            "title": "Fast X",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 854
+        }
+        ,
+        {
+            "adult": false,
+            "backdrop_path": "/4t0oBFrJyweYPt0hocW6RUa0b6H.jpg",
+            "genre_ids": [
+                28,
+                80,
+                53
+            ],
+            "id": 385687,
+            "original_language": "en",
+            "original_title": "Fast X",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.",
+            "popularity": 2334.66,
+            "poster_path": "/1E5baAaEse26fej7uHcjOgEE2t2.jpg",
+            "release_date": "2023-05-17",
+            "title": "Fast X",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 854
+        }
+        ,
+        {
+            "adult": false,
+            "backdrop_path": "/4t0oBFrJyweYPt0hocW6RUa0b6H.jpg",
+            "genre_ids": [
+                28,
+                80,
+                53
+            ],
+            "id": 385687,
+            "original_language": "en",
+            "original_title": "Fast X",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.",
+            "popularity": 2334.66,
+            "poster_path": "/1E5baAaEse26fej7uHcjOgEE2t2.jpg",
+            "release_date": "2023-05-17",
+            "title": "Fast X",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 854
+        }
+        ,
+        {
+            "adult": false,
+            "backdrop_path": "/4t0oBFrJyweYPt0hocW6RUa0b6H.jpg",
+            "genre_ids": [
+                28,
+                80,
+                53
+            ],
+            "id": 385687,
+            "original_language": "en",
+            "original_title": "Fast X",
+            "overview": "Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.",
+            "popularity": 2334.66,
+            "poster_path": "/1E5baAaEse26fej7uHcjOgEE2t2.jpg",
+            "release_date": "2023-05-17",
+            "title": "Fast X",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 854
+        }
     ],
     "total_pages": 98,
     "total_results": 1951
@@ -100,6 +184,7 @@ function generateCards(movieObject){
     let img = document.createElement('img')
     img.classList.add('movie-poster');
     img.src = "https://image.tmdb.org/t/p/w342" + movieObject.poster_path;
+    // let href = 
 
     // create title
     let title = document.createElement('div')
@@ -114,6 +199,8 @@ function generateCards(movieObject){
     movieContainer.appendChild(title)
     document.body.appendChild(movieContainer)
 }
+
+
 
 // generateCards(firstMovie);
 fakeMovies.results.forEach(generateCards)

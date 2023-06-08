@@ -15,10 +15,12 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 - [ ] User can view a list of current movies from The Movie Database API as a grid view
   - The grid element should have an id of `movies-grid`
   - Each movie wrapper element should have a class of `movie-card`
+
 - [ ] For each movie displayed, user can see the following details:
   - Title - the element should have a class of `movie-title`
   - Image - the `img` element should have a class of `movie-poster`
   - Votes - the element should have a class of `movie-votes`
+  
 - [ ] User can load more current movies by clicking a button at the bottom of the list
   - The button should have an id of `load-more-movies-btn`.
   - When clicked, the page should not refresh.
