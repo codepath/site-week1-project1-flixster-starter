@@ -73,12 +73,16 @@ let fakeMoviesAPI = {
     "total_results": 1951
 }
 
-let firstMovie = fakeMoviesAPI.results[0]
-console.log(fakeMoviesAPI.results[0].adult)
+// let firstMovie = fakeMoviesAPI.results[0]
+// console.log(fakeMoviesAPI.results[0].adult)
+
+let movieContainer = document.createElement('div')
+movieContainer.classList.add("movieContainer")
+document.body.appendChild(movieContainer)
 
 function generateCard(movieAPI){
     //create star
-    let star = document.createElement('span')
+    let star = document.createElement('span') 
     let starContent = document.createTextNode("⭐️")
     star.appendChild(starContent)
     star.classList.add("star")
@@ -113,7 +117,18 @@ function generateCard(movieAPI){
     movie.appendChild(image)
     movie.appendChild(averageContainer)
     movie.appendChild(movieName)
-    document.body.appendChild(movie)
+    // document.body.appendChild(movie)
+
+    // let movieContainer = document.createElement('div')
+    // movieContainer.classList.add("movieContainer")
+    // const parent = document.querySelector(".movieContainer")
+    movieContainer.appendChild(movie)
 }
 
-generateCard(firstMovie)
+
+for (let i = 0; i<fakeMoviesAPI.results.length; i++){
+    generateCard(fakeMoviesAPI.results[i])
+}
+
+
+// generateCard(firstMovie)
