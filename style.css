@@ -40,12 +40,19 @@ img {
 .movie {
 
     
-    display: inline-block;
+    margin-top: 10px;
+    
+
+
+
+}
+
+.movieContainer {
+
+    display: flex;
+    justify-content: space-between;
     justify-content: center;
-    /* margin: 100px; */
-    margin: 120px;
-
-
+    flex-wrap: wrap;
 
 }
 
