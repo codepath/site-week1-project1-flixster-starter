@@ -72,5 +72,46 @@ let fakeMoviesAPI = {
     "total_pages": 98,
     "total_results": 1951
 }
+let firstMovie = fakeMoviesAPI.results[0]
+console.log(fakeMoviesAPI.results[0].adult)
 
-console.log(fakeMoviesAPI.results[0])
+ //create star
+ function generateCards(movieObject) {
+    let star = document.createElement('span');
+    star.classList.add('star');
+    let starContent = document.createTextNode('⭐️');
+    star.appendChild(starContent);
+
+//create rating 
+    let rating = document.createElement('span');
+    rating.classList.add('rating');
+    let ratingContent = document.createTextNode(movieObject.vote_average);
+    rating.appendChild(ratingContent);
+   
+//create average container 
+ let averageContainer = document.createElement('div');
+ averageContainer.classList.add('averageContainer');
+ averageContainer.appendChild(star);
+ averageContainer.appendChild(rating);
+ //document.body.appendChild(averageContainer);
+
+
+let image = document.createElement('img');
+image.src = "https://image.tmdb.org/t/p/w342" + movieObject.poster_path
+//document.body.insertBefore(image, averageContainer);
+
+let name = document.createElement('div');
+name.classList.add('name');
+name.innerText = movieObject.original_title
+//document.body.insertBefore(name, averageContainer.nextSibling);
+
+//create movie section
+let movie = document.createElement('section')
+movie.classList.add('name');
+movie.appendChild(image);
+movie.appendChild(averageContainer);
+movie.appendChild(name);
+document.body.appendChild(movie);
+ }
+
+generateCards(firstMovie);
