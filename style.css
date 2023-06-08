@@ -1,1 +1,29 @@
+/* 
+.movie{
+
+display: flex;
+flex-direction: row;
+
+} */
+
+
+* {
+
+    background-color: black;
+    color: white;
+
+
+}
+
+img {
+
+    width: 20%;
+    height: auto;
+}
+
+.star {
+
+    margin: 8px;
+
+}
 

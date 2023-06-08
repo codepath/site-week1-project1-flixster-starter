@@ -73,22 +73,26 @@ let fakeMoviesAPI = {
     "total_results": 1951
 }
 
-let firstMovie = fakeMoviesAPI.results[0]
+let firstMovie = fakeMoviesAPI.results[0] // gets access to all properties of first movie in array
+let secondMovie = fakeMoviesAPI.results[1]
+let thirdMovie = fakeMoviesAPI.results[2]
 
 console.log(firstMovie)
 
-function generateCards(movieObject){
+function generateCards(movieObject){ // function that will generate the movie cards in our mini netflix
     // create star
-   let star = document.createElement('span');
-    let starContent = document.createTextNode('⭐️');
-    star.appendChild(starContent);
-    document.body.appendChild(star);
+    let star = document.createElement('span'); // creating a span element
+    let starContent = document.createTextNode('⭐️'); // the content of the span star will have the emoji of star
+    star.appendChild(starContent); // we then put the content inside the span star
+    //document.body.appendChild(star); // we then put the star span inside the body of the html document
+    star.classList.add('star')
 
     // create rating
     let rating = document.createElement('span');
     let ratingContent = document.createTextNode(movieObject.vote_average);
     rating.appendChild(ratingContent);
     document.body.appendChild(rating);
+    rating.classList.add('rating')
 
     // create average container
 
@@ -104,7 +108,34 @@ function generateCards(movieObject){
     image.src = "https://image.tmdb.org/t/p/w342" + movieObject.poster_path
     document.body.insertBefore(image, averageContainer);
 
+    // movie name
+
+    let name = document.createElement('div')
+    name.classList.add('name');
+    name.innerText = movieObject.original_title;
+    document.body.insertBefore(name, averageContainer.nextSibling);
+
+    //create movie section
+    let movie = document.createElement('section');
+    movie.classList.add('movie')
+    movie.appendChild(image)
+    movie.appendChild(averageContainer)
+    movie.appendChild(name)
+    document.body.appendChild(movie)
+
 
 }
 
-generateCards(firstMovie);
+// let firstCard = generateCards(firstMovie);
+// let secondCard = generateCards(secondMovie);
+// let thirdCard= generateCards(thirdMovie);
+
+// generateCards(firstMovie);
+// generateCards(secondMovie);
+// generateCards(thirdMovie);
+
+for (let i = 0; i<3; i++){
+
+    generateCards(fakeMoviesAPI.results[i]);
+
+}
