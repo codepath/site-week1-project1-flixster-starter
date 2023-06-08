@@ -112,6 +112,10 @@ movie.appendChild(image);
 movie.appendChild(averageContainer);
 movie.appendChild(name);
 document.body.appendChild(movie);
+
  }
 
-generateCards(firstMovie);
+ for (let i = 0; i < fakeMoviesAPI.results.length; i+=1){
+    generateCards(fakeMoviesAPI.results[i])
+    }
+//generateCards(firstMovie);
