@@ -32,19 +32,18 @@
   .movie-card {
     display: inline-block;
     vertical-align: top;
-    padding: 0 0 0 5px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: calc(100% * (1/4) - 10px - 1px);
+    padding: auto;
     margin-bottom: 30px;
-    background-color:brown;
+    background-color:maroon;
+    margin-left:5%;
+    text-align: center;
   }
 
   .movie-poster {
     flex-grow:0;
     flex-shrink:0;
-    width: 100%;
+    width: 50%;
+    ;
   }
 
   #search-button{
