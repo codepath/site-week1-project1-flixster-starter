@@ -152,9 +152,10 @@ const movieContainer = document.querySelector('#movie-container')
 // let movieContainer = document.createElement('section');
 // movieContainer.classList.add('movieContainer')
 
+function fetchAndDisplay(page){
 
 
-fetch("https://api.themoviedb.org/3/discover/movie?api_key=4026d59afea2b4fa4ab32088708c56c1&page=1").then((response) => response.json()).then((data) => {
+    fetch('https://api.themoviedb.org/3/discover/movie?api_key=4026d59afea2b4fa4ab32088708c56c1&page=${page}').then((response) => response.json()).then((data) => {
     console.log(data);
     for (let i = 0; i<data.results.length; i++){
 
@@ -162,7 +163,13 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=4026d59afea2b4fa4ab32
         //console.log(fakeMoviesAPI.results[i]);
     
     }
-})
+    })
+
+}
+
+fetchAndDisplay(1);
+
+
 
 
 
@@ -170,39 +177,15 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=4026d59afea2b4fa4ab32
 
 // LOAD MORE BUTTON
 
-let requestNum = 0;
+let requestNum = 1;
 let button = document.getElementById('loadMore-button');
 button.addEventListener('click', iterate)
 
-let i = 2
 
 function iterate(){
 
-    // while(i != 89){
-
-
-
-
-
-
-    // }
-    for (i; i<89; i++){
-
-        // movieContainer.appendChild(generateCards(data.results[i])) ;
-        // //console.log(fakeMoviesAPI.results[i]);
-        
-        fetch("https://api.themoviedb.org/3/discover/movie?api_key=4026d59afea2b4fa4ab32088708c56c1&page=${i}").then((response) => response.json()).then((data) => {
-        console.log(data);
-        for (let i = 0; i<data.results.length; i++){
-
-        movieContainer.appendChild(generateCards(data.results[i])) ;
-        //console.log(fakeMoviesAPI.results[i]);
-    
-    }
-    })
-    
-    
-    }
-    
+    requestNum += 1;
+    fetchAndDisplay(requestNum);
+  
 }
 
