@@ -20,20 +20,31 @@ h1 {
 
     display: flex;
     justify-content: center;
+    font-size: 70px;
+    color: white;
 
 
 }
 
-img {
+/* img {
 
     width: 60%;
     height: auto;
     transition: 1s ease;
     
    
+} */
+
+.moviePoster{
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    transition: 1s ease;
+
 }
 
-img:hover{
+
+.moviePoster:hover{
     -webkit-transform: scale(0.8);
     -ms-transform: scale(0.8);
     transform: scale(0.8);
@@ -51,8 +62,8 @@ img:hover{
     
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
     
     
 
@@ -140,6 +151,55 @@ transform: translateY(-2px);
     justify-content: center;
 
 } */
+
+h2{
+
+    font-size: 40px;
+
+}
+
+#search-button {
+
+
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+
+}
+
+#search-button{
+
+    border-radius: 12px;
+
+
+}
+
+#search-button:hover {background-color: #3e8e41}
+
+#search-button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 3px #666;
+  transform: translateY(1px);
+}
+
+#search-input {
+
+    padding:20px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    margin: 4px 2px;
+    border-radius: 12px;
+    
+
+
+
+}
 
 
 

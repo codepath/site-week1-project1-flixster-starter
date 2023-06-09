@@ -109,7 +109,9 @@ function generateCards(movieObject){ // function that will generate the movie ca
     // image
 
     let image = document.createElement('img');
-    image.src = "https://image.tmdb.org/t/p/w342" + movieObject.poster_path
+    let defaultImage = "https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie.jpg"
+    image.src = movieObject.poster_path ? "https://image.tmdb.org/t/p/w342" + movieObject.poster_path : defaultImage
+    image.className = 'moviePoster'
     document.body.insertBefore(image, averageContainer);
 
     // movie name
@@ -132,25 +134,11 @@ function generateCards(movieObject){ // function that will generate the movie ca
 }
 
 
-// let firstCard = generateCards(firstMovie);
-// let secondCard = generateCards(secondMovie);
-// let thirdCard= generateCards(thirdMovie);
 
-// generateCards(firstMovie);
-// generateCards(secondMovie);
-// generateCards(thirdMovie);
-
-// for (let i = 0; i<3; i++){
-
-//     generateCards(fakeMoviesAPI.results[i]);
-
-// }
-//console.log(generateCards(fakeMoviesAPI.results[0]))
 
 // // create movie container
 const movieContainer = document.querySelector('#movie-container')
-// let movieContainer = document.createElement('section');
-// movieContainer.classList.add('movieContainer')
+
 
 function fetchAndDisplay(page){
 
@@ -160,14 +148,18 @@ function fetchAndDisplay(page){
     for (let i = 0; i<data.results.length; i++){
 
         movieContainer.appendChild(generateCards(data.results[i])) ;
-        //console.log(fakeMoviesAPI.results[i]);
+        
     
     }
     })
 
 }
 
-fetchAndDisplay(1);
+window.onload = function(){ 
+    
+    fetchAndDisplay(1);
+
+}
 
 
 
@@ -175,17 +167,56 @@ fetchAndDisplay(1);
 
 // LOAD MORE BUTTON
 
+const searchName = document.getElementById('search-input')
+let pageSearch = 2;
 let pageNum = 1;
 let button = document.getElementById('loadMore-button');
-button.addEventListener('click', iterate)
+button.addEventListener('click', () => {iterate(searchName.value)})
+
+// iterate()
+// function temp() {
+//     iterate()
+// }
+
+// (name) => {
+//     iterate(name)
+// }
 
 
-function iterate(){
-
+function iterate(movieName){
+    
+    if (movieName === ''){
     pageNum += 1;
     fetchAndDisplay(pageNum);
+    pageSearch = 2;
+
+    }
+
+    else{
+        console.log("before",pageSearch)
+        fetch(`https://api.themoviedb.org/3/search/movie?query=${movieName}&api_key=4026d59afea2b4fa4ab32088708c56c1&page=${pageSearch}`).then((response) => response.json()).then((data) => {
+        console.log(data);
+        
+        //movieContainer.innerHTML = ''; // clearing previous movies
+        
+        for (let i = 0; i<data.results.length; i++){
+    
+            movieContainer.appendChild(generateCards(data.results[i])) ;
+            
+        
+        }
+        })
+
+        pageSearch += 1;
+        console.log("after",pageSearch)
+    }
+
+
+
+    
   
 }
+
 
 
 
@@ -216,7 +247,7 @@ function logSearch(movieName){
 
     if (movieName === ''){
 
-
+        pageCount = 0; // Reset position of search
         fetch(`https://api.themoviedb.org/3/discover/movie?api_key=4026d59afea2b4fa4ab32088708c56c1&page=1`).then((response) => response.json()).then((data) => {
         console.log(data);
 
@@ -225,11 +256,11 @@ function logSearch(movieName){
         for (let i = 0; i<data.results.length; i++){
 
         movieContainer.appendChild(generateCards(data.results[i])) ;
-        //console.log(fakeMoviesAPI.results[i]);
+        
     
     }
     })
-
+    pageSearch = 2;
 
 
     }
@@ -249,15 +280,13 @@ function logSearch(movieName){
         }
         })
 
+        pageNum = 1;
+
     }
 
 }
 
 
-
-//     event.preventDefault();
-    
-//   }
   
 //   // Select form element
   
@@ -267,12 +296,13 @@ const form = document.getElementById('search-form');
 // // Connect the function to your form by
 // // adding a submit event listener
 
-const searchName = document.getElementById('search-input')
 
-  
+
+let pageCount = 1; 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    logSearch(searchName.value);
+    //pageCount += 1; // increaser page number in each click
+    logSearch(searchName.value,pageCount);
 });
 
 
