@@ -155,7 +155,7 @@ const movieContainer = document.querySelector('#movie-container')
 function fetchAndDisplay(page){
 
 
-    fetch('https://api.themoviedb.org/3/discover/movie?api_key=4026d59afea2b4fa4ab32088708c56c1&page=${page}').then((response) => response.json()).then((data) => {
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=4026d59afea2b4fa4ab32088708c56c1&page=${page}`).then((response) => response.json()).then((data) => {
     console.log(data);
     for (let i = 0; i<data.results.length; i++){
 
@@ -171,21 +171,23 @@ fetchAndDisplay(1);
 
 
 
-
-
 // document.body.appendChild(movieContainer)
 
 // LOAD MORE BUTTON
 
-let requestNum = 1;
+let pageNum = 1;
 let button = document.getElementById('loadMore-button');
 button.addEventListener('click', iterate)
 
 
 function iterate(){
 
-    requestNum += 1;
-    fetchAndDisplay(requestNum);
+    pageNum += 1;
+    fetchAndDisplay(pageNum);
   
 }
+
+
+
+
 
