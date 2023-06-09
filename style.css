@@ -2,7 +2,9 @@
 
 body{
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(203,7,7,1) 100%, rgba(0,212,255,1) 100%);
-    margin: 40px;
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-bottom: 3%;
 }
 
 h1{
@@ -11,7 +13,7 @@ h1{
     height: 70px;
 }
 
-h1, .star, .rating, .movie-name, #now-playing{
+h1, .star, .rating, .movie-name, #now-playing, label{
     color: white;
 }
 
@@ -42,6 +44,9 @@ img{
     filter: drop-shadow(30px 10px 4px #020110);
     background-color: black;
 }
+.movie{
+    width: 200px;
+}
 .average {
     margin-top: 10px;
 }
@@ -51,7 +56,9 @@ img{
     width: 100px;
 }
 
+label{
+    font-size: 22px;
+}
 form{
-    display: inline-block;
-    margin: 0 auto;
+    text-align: center;
 }
