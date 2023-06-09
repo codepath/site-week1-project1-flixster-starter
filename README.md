@@ -2,7 +2,7 @@
 
 ## Week 1 Assignment: Flixster
 
-Submitted by: **NAME**
+Submitted by: **Ana Camba Gomes**
 
 Estimated time spent: **#** hours spent in total
 

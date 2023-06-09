@@ -26,14 +26,6 @@ h1 {
 
 }
 
-/* img {
-
-    width: 60%;
-    height: auto;
-    transition: 1s ease;
-    
-   
-} */
 
 .movie-poster{
     width: 300px;
@@ -99,11 +91,6 @@ h1 {
 }
 
 #load-more-movies-btn {
-    /* margin-left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px;
-    margin-bottom: 20px; */
-
     
         background-color: #000000;
         border: 2px solid #1A1A1A;
