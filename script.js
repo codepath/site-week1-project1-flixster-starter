@@ -195,20 +195,54 @@ function iterate(){
 
 // Function executed on submit
 
-const logSearch = (event) => {
-    console.log('The form was submitted.');
-    event.preventDefault();
+// const logSearch = (event) => {
+//     console.log('The form was submitted.');
+
+//     fetch(`https://api.themoviedb.org/3/search/movie?api_key=4026d59afea2b4fa4ab32088708c56c1&page=1`).then((response) => response.json()).then((data) => {
+//         console.log(data);
+//         for (let i = 0; i<data.results.length; i++){
     
-  }
+//             movieContainer.appendChild(generateCards(data.results[i])) ;
+            
+        
+//         }
+//         })
+    
+//     }
+
+function logSearch(movieName){
+
+    console.log('The form was submitted.');
+
+    fetch(`https://api.themoviedb.org/3/search/movie?query=${movieName}&api_key=4026d59afea2b4fa4ab32088708c56c1&page=1`).then((response) => response.json()).then((data) => {
+        console.log(data);
+        for (let i = 0; i<data.results.length; i++){
+    
+            movieContainer.appendChild(generateCards(data.results[i])) ;
+            
+        
+        }
+        })
+
+}
+
+
+
+//     event.preventDefault();
+    
+//   }
   
-  // Select form element
+//   // Select form element
   
 const form = document.getElementById('search-form');
   
   
-// Connect the function to your form by
-// adding a submit event listener
+// // Connect the function to your form by
+// // adding a submit event listener
+
+let searchName = document.getElementById('search-input')
+
   
-  form.addEventListener('submit', logSearch);
+form.addEventListener('submit', logSearch(searchName.value));
   
   
