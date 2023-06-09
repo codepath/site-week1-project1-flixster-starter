@@ -28,9 +28,17 @@ img {
 
     width: 60%;
     height: auto;
+    transition: 1s ease;
     
    
 }
+
+img:hover{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    transition: 1s ease;
+    }
 
 .star {
 
