@@ -1,12 +1,10 @@
-📝 **NOTE** Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Week 1 Assignment: Flixster
 
 Submitted by: **Cesar Monagas Romero**
 
-Estimated time spent: ** # ** hours spent in total
+Estimated time spent: ** 15 ** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site](https://cesarmonagas15.github.io/site-week1-project1-flixster/)
 
 ### Application Features
 
@@ -42,23 +40,27 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
+`https://watch.screencastify.com/v/QVHYXXB48zt7R3dp1oCp`
 
 ### Reflection
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+      Some of the topics did help, but the way things were done in the labs was a bit different than the project. Particularly with the search function, I had a lot of trouble getting it to work correctly. Also, in the lab, we would always be able to generate more gifs with load-more, but the movie API has a limited number of movie searches and I didn't know how to stop generating movies after there are no more new ones, so it simply repeats.
+
+      Other than this though, the labs were helpful, but after the 2nd lab, I decided to not do the labs entirely and simply learn from them or the solutions to work on my own project. This helped and didn't make me feel as behind, but other people who did the labs were more behind on the project.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+    I would have wanted to add the pop-up features and display a video.
+
+    I also would have wanted to make my code more readable and work better. I wish I had encapsulated things into functions instead of performing repeated actions over again.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+      When I was demoing, I realized the issue with my load-more function after you searched. It would always load more movies even if the API didn't have more movies with that search, and we did not talk about how to stop that from happening.
+
+      Other than that, my demo was very smooth and I had a lot of fun showcasing what I did in a video.
 
 ### Open-source libraries used
 
@@ -66,4 +68,5 @@ Add your response here
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Shout out to Khalid, Ana, David, Maria, Paige, Sammy, and A'Shaun!!!!
+

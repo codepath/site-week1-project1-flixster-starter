@@ -2,6 +2,10 @@
 // Global constants
 let APIpage = 1;
 
+/////////////////////////////
+///// DISPLAY MOVIES ///////
+/////////////////////////////
+
 // function gets movies from API
 function getMovies(){
     const options = {
@@ -11,7 +15,7 @@ function getMovies(){
           Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNzZlZWIzODJmZmNiMjMyNTFiMjJkNzRlNzg1OTQzMyIsInN1YiI6IjY0ODAwNWRlNjQ3NjU0MDE0MzMyZjQyNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tZPmNIXblH37hDQ-EAzomK8hpXr3j9MrxXfEOik9Pms'
         }
       };
-      
+      // add page counter
       fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=' + APIpage.toString(), options)
         .then(response => response.json())
         .then((data) => {
@@ -68,12 +72,7 @@ function generateCards(movieObject){
 
 }
 
-// generate cards for all elements in API
-// for (let i = 0; i < fakeMoviesAPI.results.length; i++) {
-//     generateCards(fakeMoviesAPI.results[i]);
-//   }
-//generateCards(firstMovie);
-
+// DEFAULT LOAD //
 // when page loads call function to get movies from API
 document.onload = getMovies();
 
@@ -114,8 +113,6 @@ loadMore.addEventListener('click', () => {
 //////////////////////
 
 
-// let searchBtn = document.getElementById("search-submit");
-
 
 // search function
 
@@ -143,5 +140,20 @@ searchInput.addEventListener('keyup',()=> {
     }
 });
 
+/////////////////////
+// TOGLE DARK MODE //
+/////////////////////
+let themeButton = document.getElementById("theme-button");
 
+function toggleDarkMode(){
+    document.body.classList.toggle("dark-mode");
+  }
 
+themeButton.addEventListener("click", toggleDarkMode);
+
+// CLEAR SEARCH BUTTON //
+
+if (searchInput.value !== ''){
+    let clearBtn = document.getElementById("clear-button");
+    clearBtn.addEventListener('click')
+};

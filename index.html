@@ -6,20 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cesar's Flixster</title>
 
+    <link rel="icon" href="https://illustoon.com/photo/7626.png">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
     <h1>☁️🍿 César's Flixster 🎞️ ☁️</h1> 
 
+    <button id="theme-button">Dark Mode</button><br><br>
 
+        <section id="search-section">
         <form id = "search-form">
             <label id = "search-label" for="search" name = "search">Search Movie Name</label><br>
-            <input type="text" name="search-input" id="search-input" placeholder ="🔍 Search..." required><br><br>
+            <input type="text" name="search-input" id="search-input" placeholder ="🔍 Search..." required>
             <!--
             <button id="search-submit" type = "sumbit" >Submit</button>
             -->
+            <button id="clear-button">Clear Search</button>
         </form><br>
+        </section>
+
 
         <section id="movie-grid">
             <!-- <section class="movie-card">
