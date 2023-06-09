@@ -7,7 +7,7 @@ flex-direction: row;
 } */
 
 
-* {
+body {
 
     background-color: black;
     color: #9a9a9a;
@@ -41,13 +41,11 @@ img {
 
     
     margin-top: 10px;
-    
-
-
+    margin-bottom: 10px;
 
 }
 
-.movieContainer {
+#movie-container {
 
     display: flex;
     justify-content: space-between;
@@ -55,6 +53,32 @@ img {
     flex-wrap: wrap;
 
 }
+
+#search-form {
+
+    text-align: center;
+ 
+
+  }
+
+#now-playing {
+
+    display: flex;
+}
+
+.name {
+
+    font-weight: bold;
+
+}
+
+#loadMore-button {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 
 
 
