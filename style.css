@@ -1,15 +1,65 @@
-.movie{
+body{
     background-color: black;
 }
 
-.rating{
+.website-header { 
+    text-align: center;
     color: white;
 }
 
-img{
-    padding: 10px;
+.search-container{
+    display: inline-flex;
+    width:100%;
+    /* align-items: center; */
+    justify-content: center;
 }
 
-.name{
+#search-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#close-search{
+    text-align: center;
+}
+
+#movies-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    gap: 40px;
+}
+
+.movie-card{
+    background-color: black;
+
+}
+
+
+.star{
+    padding-right: 10px;
+}
+
+.movie-votes{
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-poster{
+    text-align: center;
+}
+
+.movie-title{
+    color: white;
+    text-align: center;
+}
+
+#more-btn{
+    text-align: center;
+
 }
