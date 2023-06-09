@@ -191,3 +191,24 @@ function iterate(){
 
 
 
+// SEARCH FUNCTION
+
+// Function executed on submit
+
+const logSearch = (event) => {
+    console.log('The form was submitted.');
+    event.preventDefault();
+    
+  }
+  
+  // Select form element
+  
+const form = document.getElementById('search-form');
+  
+  
+// Connect the function to your form by
+// adding a submit event listener
+  
+  form.addEventListener('submit', logSearch);
+  
+  
