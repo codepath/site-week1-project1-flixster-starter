@@ -99,7 +99,7 @@ function iterate(movieName){
     }
 
     else{
-        console.log("before",pageSearch)
+        
         fetch(`https://api.themoviedb.org/3/search/movie?query=${movieName}&api_key=4026d59afea2b4fa4ab32088708c56c1&page=${pageSearch}`).then((response) => response.json()).then((data) => {
         console.log(data);
         
@@ -114,7 +114,7 @@ function iterate(movieName){
         })
 
         pageSearch += 1;
-        console.log("after",pageSearch)
+        
     }
 
 
@@ -130,7 +130,7 @@ function iterate(movieName){
 
 function logSearch(movieName){
 
-    console.log('The form was submitted.');
+    
 
     if (movieName === ''){
 
