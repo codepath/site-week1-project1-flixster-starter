@@ -42,8 +42,8 @@ Deployed Application (optional): [Flixster Deployed Site](https://pelumitayo.git
 
 ### Walkthrough Video
 
-<a href="https://www.loom.com/share/7d0f923b5d5347858bd0b081ee4414bf">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/7d0f923b5d5347858bd0b081ee4414bf-with-play.gif">
+<a href="https://www.loom.com/share/e41dea4e169f4713b11327929d0e5a9b">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/e41dea4e169f4713b11327929d0e5a9b-with-play.gif">
   </a>
   
 ### Reflection
