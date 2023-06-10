@@ -42,6 +42,8 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 
 [![Watch the video](https://www.youtube.com/watch?v=E_PaSFGeFDM)](https://youtu.be/E_PaSFGeFDM)
+
+Backup : https://www.youtube.com/watch?v=E_PaSFGeFDM
 ### Reflection
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
