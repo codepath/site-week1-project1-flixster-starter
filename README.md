@@ -44,7 +44,9 @@ Deployed Application (optional): [Flixster Deployed Site](https://anacambag.gith
 
 `TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
 
-`ADD_EMBEDDED_CODE_HERE`
+`<a href="https://www.loom.com/share/11d9432d1a3a418ca9b20110c98a2a75">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/11d9432d1a3a418ca9b20110c98a2a75-with-play.gif">
+  </a>`
 
 <a href="https://www.loom.com/share/11d9432d1a3a418ca9b20110c98a2a75">
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/11d9432d1a3a418ca9b20110c98a2a75-with-play.gif">
