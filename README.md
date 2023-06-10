@@ -41,8 +41,8 @@ Deployed Application (optional): [Flixster Deployed Site](https://anacambag.gith
 
 ### Walkthrough Video
 
-<a href="https://www.loom.com/share/1a8a8ded8a6247ec8fad9f80150871fc">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/1a8a8ded8a6247ec8fad9f80150871fc-with-play.gif">
+<a href="https://www.loom.com/share/3f48cf133c2e48a8b70efc16b329be7b">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/3f48cf133c2e48a8b70efc16b329be7b-with-play.gif">
   </a>
 
 ### Reflection
