@@ -1,19 +1,23 @@
-// Global variables
+// Global Variables
 
 let currentPage = 1; 
 let currentQuery = ""; 
 
-const nowPlayingURL = 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page='; 
-const searchURL1 = 'https://api.themoviedb.org/3/search/movie?query=';
-const searchURL2 = '&include_adult=false&language=en-US&page=';
+const nowPlayingURL = 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page='; // APPEND: currentPage
+const searchURL1 = 'https://api.themoviedb.org/3/search/movie?query='; // APPEND: currentQuery
+const searchURL2 = '&include_adult=false&language=en-US&page='; // APPEND: currentPage
 
-let currentURL = nowPlayingURL; 
+let currentURL = nowPlayingURL; // default
 
-// Buttons / Event Listeners
+// Buttons / Event Listeners / Pointers to Frequently Modified Elements
 
 const searchBtn = document.querySelector("#search-button");
 const loadMoreBtn = document.querySelector("#load-more");
 const closeBtn = document.querySelector('#close-button');
+
+const generalMovieCont = document.querySelector(".movie-container");
+const searchForm = document.querySelector("#search-form");
+const subtitleTxt = document.querySelector("#subtitle");
 
 loadMoreBtn.addEventListener("click", function(){
     currentPage++;
@@ -22,31 +26,26 @@ loadMoreBtn.addEventListener("click", function(){
 });
 
 searchBtn.addEventListener("click", function(){
-    const generalMovieCont = document.querySelector(".movie-container");
     generalMovieCont.innerHTML = '';
     currentPage = 1;
     currentQuery = document.querySelector('#search-form').value;
     currentURL = searchURL1 + currentQuery + searchURL2 + currentPage;
     loadMovies(currentURL);
-    const subtitleTxt = document.querySelector("#subtitle");
     subtitleTxt.innerHTML = "Searching \"" + currentQuery + "\"...";
     closeBtn.style.visibility = "visible";
 });
 
 closeBtn.addEventListener("click", function(){
-    const generalMovieCont = document.querySelector(".movie-container");
     generalMovieCont.innerHTML = '';
     currentPage = 1;
     currentURL = nowPlayingURL + currentPage;
     loadMovies(currentURL);
-    const searchForm = document.querySelector("#search-form");
     searchForm.value = "";
-    const subtitleTxt = document.querySelector("#subtitle");
     subtitleTxt.innerHTML = "Now playing...";
     closeBtn.style.visibility = "hidden";
 });
 
-// Async functions and fetches
+// Async Functions / Fetches (need to private read access token in config.js for next time)
 
 async function fetchMoviesJSON(url) {
     const options = {
@@ -61,25 +60,19 @@ async function fetchMoviesJSON(url) {
     return data;
 }
 
-// General functions/methods/init
+// General Functions/Methods/init
 
 function loadMovies(url) {
-    // Call async function and obtain the array of movies by checking data.results
     fetchMoviesJSON(url).then((data) => {
-        // Find 'movie-container' div (parent node) using querySelector method
         const generalMovieCont = document.querySelector(".movie-container");
-        // Fetch an image and create an image element to append to 'movie-container'
-        // Create individual movie container and append to general movie container
-        // By appending, add attributes/classes to the individual movie container
         for (const movie of data.results) {
-            // Appending individual movie container to general container
             const indivMovieCont = document.createElement('div');
             indivMovieCont.classname = "indiv-movie";
             generalMovieCont.appendChild(indivMovieCont);
-            // Movie Poster
+
             let moviePoster = document.createElement('img');
             moviePoster.className = "movie-poster"
-            const moviePosterImg = "https://image.tmdb.org/t/p/w342" + movie.poster_path; // worry about image being null ...
+            const moviePosterImg = "https://image.tmdb.org/t/p/w342" + movie.poster_path;
             moviePoster.src = moviePosterImg;
             if (movie.poster_path == null) {
                 moviePoster.src = "";
@@ -87,7 +80,7 @@ function loadMovies(url) {
                 moviePoster.width = 342;
             }
             indivMovieCont.appendChild(moviePoster);
-            // Title and Rating
+
             let titleRate = document.createElement('h3');
             titleRate.className = "movie-title-rating";
             const titleRateTxt = movie.original_title + " - ⭐ " + movie.vote_average;
@@ -101,5 +94,6 @@ function init() {
     loadMovies(currentURL);
 }
 
-// Method runs
+// Running method / 'main'
+
 init();
