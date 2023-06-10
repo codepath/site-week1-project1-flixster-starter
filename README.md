@@ -50,21 +50,23 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+    The topics discussed in our labs definitely prepared me for the assignment specifically the topic on APIs and git. Although the topic on APIs was good, I still felt slightly unprepared and ultimately overwhelmed by the process. There was a lot of googling that needed to be done, but I believe that is what I am to expect if I want to be an engineer. I really enjoyed mob programming and walking through code togehter as a class, it was much easier to grasp concepts that way. 
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+
+    I would have definitely added a popup feature and the movie trailer feature to my code, I think would have been a very cool feature to have. 
   
-Add your response here
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+    I did not do a project demo for this week, somehing that I saw my peers implement that I will definitely take note of is the use of keyframes to make their code more visually appealing as well as more accessibiility features, specifically, a dark mode and light mode. 
 
 ### Open-source libraries used
 
 - Add any links to open-source libraries used in your project.
-  None.
+  None Used.
 
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Shout out to A'shaun for being a great resource and an even amazing teacher, additionally shoutout to Sammy for explaining when it comes to his ability to explain concepts through. Shoutout to Kelechi for helping understanding async function. Shoutout to Iden for being a pair programmer! 
