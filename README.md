@@ -41,8 +41,8 @@ Deployed Application (optional): [Flixster Deployed Site](https://anacambag.gith
 
 ### Walkthrough Video
 
-<a href="https://www.loom.com/share/11d9432d1a3a418ca9b20110c98a2a75">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/11d9432d1a3a418ca9b20110c98a2a75-with-play.gif">
+<a href="https://www.loom.com/share/1a8a8ded8a6247ec8fad9f80150871fc">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/1a8a8ded8a6247ec8fad9f80150871fc-with-play.gif">
   </a>
 
 ### Reflection
@@ -76,10 +76,8 @@ The other feature that caught my attention was in Marwan's website. He had a mov
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+- N/A
 
 ### Shout out
-
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 
 I want to give a huge shout out to my cohort mentors: Paige, Sammy and Ashaun. Also, I want to thank all my cohort peers specially: Nara, Maria, Cesar, Khalid, Brian and David for helping me throughout this project.
