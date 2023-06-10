@@ -42,7 +42,10 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-https://www.loom.com/share/d21ba3445f0d48b582cb51bdae472146
+<a href="https://www.loom.com/share/d21ba3445f0d48b582cb51bdae472146">
+    <p>Flixtsser - 9 June 2023 - Watch Video</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/d21ba3445f0d48b582cb51bdae472146-with-play.gif">
+  </a>
 
 ### Reflection
 
