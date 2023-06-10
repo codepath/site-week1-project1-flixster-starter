@@ -2,39 +2,39 @@
 
 ## Week 1 Assignment: Flixster
 
-Submitted by: **NAME**
+Submitted by: Jose Ines Martinez
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: #8 hours
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site](https://guerookeh.github.io/site-week1-project1-flixster-starter/)
 
 ### Application Features
 
 #### Core Features
 
-- [ ] User can view a list of current movies from The Movie Database API as a grid view
+- [X] User can view a list of current movies from The Movie Database API as a grid view
   - The grid element should have an id of `movies-grid`
   - Each movie wrapper element should have a class of `movie-card`
-- [ ] For each movie displayed, user can see the following details:
+- [X] For each movie displayed, user can see the following details:
   - Title - the element should have a class of `movie-title`
   - Image - the `img` element should have a class of `movie-poster`
   - Votes - the element should have a class of `movie-votes`
-- [ ] User can load more current movies by clicking a button at the bottom of the list
+- [X] User can load more current movies by clicking a button at the bottom of the list
   - The button should have an id of `load-more-movies-btn`.
   - When clicked, the page should not refresh.
   - New movies should simply be added to the bottom
-- [ ] Allow users to search for movies and display them in a grid view
+- [X] Allow users to search for movies and display them in a grid view
   - There should be a search input element with an id of `search-input`
   - Users should be able to type into the input
   - When a user hits 'Enter', it should send a search request to the movies API
   - The results from the search should be displayed on the page
   - There should be a close icon with an id of `close-search-btn` that exits the search, clears results, and shows the current movies displayed previously
-- [ ] Website accounts for basic HTML/CSS accessibility features
-- [ ] Website should be responsive
+- [X] Website accounts for basic HTML/CSS accessibility features
+- [X] Website should be responsive
 
 #### Stretch Features
 
-- [ ] Deploy website using GitHub Pages.
+- [X] Deploy website using GitHub Pages.
 - [ ] Allow user to view more details about a movie within a popup.
 - [ ] Improve the user experience through CSS & animation.
 - [ ] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
@@ -44,26 +44,32 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 `TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
 
-`ADD_EMBEDDED_CODE_HERE`
+[`ADD_EMBEDDED_CODE_HERE`](https://vimeo.com/834924159?share=copy)
 
 ### Reflection
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
+The Giphy Party lab really helped a lot. I'm coming into this program with a good foundation on data structures so the Javascript aspect of this week made more sense than anything.
+HTML/CSS structuring and styling was the thing that really took me a good amount of time to figure out. Starting on the Giphy lab helped me set up that basic understanding so that I could seamlessly move onto the more essential Javascript component of the project.
+
 Add your response here
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+
+I would've added a hover feature so that additional information for each movie container would display, in addition I would also have the movie trailer for each pop up but not play automatically (because that's annoying).
   
 Add your response here
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+Not exactly the demo, but I did talk to several peers and realized that there were many ways to approach the problems we were dealing with. After a while, it made sense to try certain approaches over others due to better layout, accessibility, and runtime.
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+N/A.
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Ashaun, Paige, Sammy, our instructors, thank you so much helping me fix some tedious bugs and explaining general Javascript functionality :) (single-threaded, async, await, etc...).
+Cesar, Tomas, Khalid, Gustavo, Efren, Camila, and several others with whom I talked about different project details and implementations; they were extremely helpful and insightful.
