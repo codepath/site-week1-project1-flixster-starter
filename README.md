@@ -69,4 +69,4 @@ Deployed Application (optional): [Flixster Deployed Site](https://pelumitayo.git
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
-Shout out to A'shaun for being a great resource and an even amazing teacher, additionally shoutout to Sammy for explaining when it comes to his ability to explain concepts through. Shoutout to Kelechi for helping understanding async function. Shoutout to Iden for being a pair programmer! 
+Shout out to A'shaun for being a great resource and an even amazing teacher, additionally shoutout to Sammy for explaining when it comes to his ability to explain concepts through. Shoutout to Kelechi for helping understanding async function. Shoutout to Iden for being a great pair programmer! 
