@@ -105,6 +105,7 @@ function search(keyword, page = 1){
 
 })
 }
+///////////////////////////
 searchButton.addEventListener('click', function(event){
     event.preventDefault()
     movieContainer.innerHTML = ''
@@ -112,7 +113,7 @@ searchButton.addEventListener('click', function(event){
     search(searchValue);
     console.log(searchBar.value)
 });
-
+//////////////////////////////
 const closeSearchButton = document.getElementById('close-search-btn');
 
 closeSearchButton.addEventListener('click', function () {
