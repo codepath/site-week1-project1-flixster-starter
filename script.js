@@ -4,13 +4,13 @@ let search_url = 'https://api.themoviedb.org/3/search/movie?query='
 
 let form = document.querySelector('#search-form')
 let search = document.querySelector('#search')
-let movieContainer = document.querySelector('#movie-container')
+let movieContainer = document.querySelector('#movies-grid')
 let loadMore = document.querySelector('#load-more') 
 let home = document.querySelector("h1")
 
 populateMovieSpace(url)
 
-home.addEventListener('click', (e)=> {
+home.addEventListener('click', () => {
     movieContainer.innerHTML = ''
     populateMovieSpace(url)
 })
@@ -82,7 +82,7 @@ form.addEventListener('submit', (e) => {
 })
 
 let pageNum = 2
-loadMore.addEventListener('click', (e) => {
+loadMore.addEventListener('click', () => {
     populateMovieSpace(url+"&page="+pageNum.toString())
     pageNum += 1
 })
