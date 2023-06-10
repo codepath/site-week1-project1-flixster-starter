@@ -10,27 +10,30 @@
 </head>
 <body>
 
-    <div class= "hdr">
+    <div class= "movie-title">
         <h1>🍿🎥FLIXSTER</h1>
     </div>
-    <div id="search-form">
-        <input id="srch-input" required name="search" placeholder="Enter movie name" class="" />
-        <button id="srch-button" type="submit" class="search-btn">Search Now Playing!</button>
-    </div>
-    <button id="close-search-btn">
+    <form id="search-form">
+        <input id="search-input" required name="search" placeholder="Enter movie name..." class="" />
+        <button id="srch-button" type="submit" class="search-btn">Search now playing!</button>
+    </form>
+
+    <div id="closebtn">
+        <button id="close-search-btn">
         close search
     </button>
+    </div>
 
     <div id="nowpl">
         <h2>Now Playing...</h2>
     </div>
 
-    <div class="movie-list"> 
+    <div id="movies-grid"> 
 
     </div>
 
  <div id="slay-btn">
-    <button id="loadmore">Load more...</button> 
+    <button class="load-more-movies-btn">Load more...</button> 
 </div>
 
 </body>
