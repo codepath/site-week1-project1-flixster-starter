@@ -1,14 +1,19 @@
 const API_KEY  = "ec19ad523e949b880b38dce4fe91d6fe"
-let url = `https://api.themoviedb.org/3/discover/movie?api_key=ec19ad523e949b880b38dce4fe91d6fe`
+let url = `https://api.themoviedb.org/3/movie/now_playing?api_key=ec19ad523e949b880b38dce4fe91d6fe`
 let search_url = 'https://api.themoviedb.org/3/search/movie?query='
 
 let form = document.querySelector('#search-form')
 let search = document.querySelector('#search')
 let movieContainer = document.querySelector('#movie-container')
 let loadMore = document.querySelector('#load-more') 
+let home = document.querySelector("h1")
 
 populateMovieSpace(url)
 
+home.addEventListener('click', (e)=> {
+    movieContainer.innerHTML = ''
+    populateMovieSpace(url)
+})
 async function populateMovieSpace(url) {
     const response = await fetch(url)
     const data = await response.json()
@@ -27,7 +32,8 @@ function generateCard(movieAPI){
 
     //create rating
     let rating = document.createElement('span')
-    let ratingContent = document.createTextNode(movieAPI.vote_average)
+    let vote_average = (movieAPI.vote_average).toFixed(1);
+    let ratingContent = document.createTextNode(vote_average)
     rating.appendChild(ratingContent)
     rating.classList.add("rating")
 
@@ -43,7 +49,7 @@ function generateCard(movieAPI){
         image.src = "https://image.tmdb.org/t/p/w342" + movieAPI.poster_path
     }
     else{
-       image.src = "https://www.dreamstime.com/page-error-cartoon-style-template-reports-page-was-not-found-page-error-cartoon-style-bear-image102988168"
+       image.src = "assets/error.webp" 
     }
     image.alt = movieAPI.original_title
 
