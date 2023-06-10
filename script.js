@@ -2,11 +2,12 @@ const API_KEY  = "ec19ad523e949b880b38dce4fe91d6fe"
 let url = `https://api.themoviedb.org/3/movie/now_playing?api_key=ec19ad523e949b880b38dce4fe91d6fe`
 let search_url = 'https://api.themoviedb.org/3/search/movie?query='
 
-let form = document.querySelector('#search-form')
-let search = document.querySelector('#search-input')
-let movieContainer = document.querySelector('#movies-grid')
-let loadMore = document.querySelector('#load-more-movies-btn') 
-let home = document.querySelector("h1")
+const form = document.querySelector('#search-form')
+const search = document.querySelector('#search-input')
+const movieContainer = document.querySelector('#movies-grid')
+const loadMore = document.querySelector('#load-more-movies-btn') 
+const closeButton = document.querySelector("#close-search-btn")
+const home = document.querySelector("h1")
 
 populateMovieSpace(url)
 
@@ -17,7 +18,6 @@ home.addEventListener('click', () => {
 async function populateMovieSpace(url) {
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data.results)
     data.results.forEach( (movie) => {
         generateCard(movie);
     })
@@ -71,7 +71,6 @@ function generateCard(movieAPI){
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     searchValue = search.value
-    console.log(searchValue)
     if (searchValue && searchValue !==''){
         movieContainer.innerHTML = ''
         populateMovieSpace(search_url+searchValue+"&api_key="+API_KEY)
@@ -85,10 +84,11 @@ form.addEventListener('submit', (e) => {
 let pageNum = 2
 loadMore.addEventListener('click', () => {
     populateMovieSpace(url+"&page="+pageNum.toString())
+    console.log(pageNum)
     pageNum += 1
+
 })
 
-const closeButton = document.querySelector("#close-search-btn")
 closeButton.addEventListener('click', (e)=>{
     e.preventDefault()
     search.value = ''
