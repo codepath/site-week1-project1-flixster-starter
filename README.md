@@ -15,7 +15,7 @@ Deployed Application (optional): [Flixster Deployed Site](https://pelumitayo.git
 - [x] User can view a list of current movies from The Movie Database API as a grid view
   - The grid element should have an id of `movies-grid` (yes)
   - Each movie wrapper element should have a class of `movie-card` (yes)
-- [ ] For each movie displayed, user can see the following details:
+- [x] For each movie displayed, user can see the following details:
   - Title - the element should have a class of `movie-title` (yes)
   - Image - the `img` element should have a class of `movie-poster` (yes)
   - Votes - the element should have a class of `movie-votes` (yes)
