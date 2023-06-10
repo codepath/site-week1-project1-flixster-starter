@@ -13,6 +13,7 @@ populateMovieSpace(url)
 
 home.addEventListener('click', () => {
     movieContainer.innerHTML = ''
+    search.value = ''
     populateMovieSpace(url)
 })
 async function populateMovieSpace(url) {
