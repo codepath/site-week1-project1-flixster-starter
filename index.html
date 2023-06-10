@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flixter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script defer src="script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1> Flixter </h1>
+       
+        <form id = "search-form" autocomplete="off">
+            <div class = "searchbar">
+                <input type = "search" id = "search-input" placeholder = "Enter Movie Title" >
+                <button type = submit id="search-button"> 
+                    <span class="material-symbols-outlined">
+                        search
+                        </span>
+                </button>
+           </div>
+        </form>
+        
+    </header>
+    
+    <section id="main-page">
+        <h2> Now Playing</h2>
+        <div id = "movie-grid">
+        
+        </div>
+        <div id ="load-btn">
+            <button type = "submit" id = "load-more-movies-btn">Show More</button>
+        </div> 
+    </section>
+   <div id = "random">
+
+   </div>
+
+    <section id = "search-page">
+        <h2 class = "hidden" id = "search-results">Search Results <div>
+            <span class="close" id = "close-search-btn">+</span>
+        </div></h2>
+        <div id = "search-movies">
+            
+        </div>
+    </section>
+</body>
+
+</html>
