@@ -70,6 +70,6 @@ I did not present my project as only five people presented today. However, from 
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 
-Shout out to all my instructors for introducing the material and teaching me how to apply it.
-Shout out to Sammy for helping me with debugging and giving me advice on how to approach load more for searching. 
-Shout out to Melyssa for giving me css pointers.
+- Shout out to all my instructors for introducing the material and teaching me how to apply it.
+- Shout out to Sammy for helping me with debugging and giving me advice on how to approach load more for searching. 
+- Shout out to Melyssa for giving me css pointers.
