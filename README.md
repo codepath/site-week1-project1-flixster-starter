@@ -40,8 +40,8 @@ Deployed Application (optional): [Flixster Deployed Site](https://bereket-b.gith
 
 ### Walkthrough Video
 
-  <a href="https://www.loom.com/share/48087996698a4adebc18279483d4b486">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/48087996698a4adebc18279483d4b486-with-play.gif">
+  <a href="https://www.loom.com/share/dae32df648f24aae82b1768ddfff7355">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/dae32df648f24aae82b1768ddfff7355-with-play.gif">
   </a>
 
 ### Reflection
