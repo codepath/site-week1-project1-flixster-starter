@@ -6,7 +6,7 @@ Submitted by: **Pelumi Tayo-Orisadare**
 
 Estimated time spent: **27** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site](https://pelumitayo.github.io/site-week1-project1-flixster-starter/)
 
 ### Application Features
 
