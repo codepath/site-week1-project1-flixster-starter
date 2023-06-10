@@ -46,8 +46,8 @@ Deployed Application (optional): [Flixster Deployed Site](https://anacambag.gith
 
 `ADD_EMBEDDED_CODE_HERE`
 
-<a href="https://www.loom.com/share/b072359a117b42bf992458f6184437f3">
-    <img style="max-width:300px;" src="https://cdn.loom.com/placeholders/private-video.gif">
+<a href="https://www.loom.com/share/11d9432d1a3a418ca9b20110c98a2a75">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/11d9432d1a3a418ca9b20110c98a2a75-with-play.gif">
   </a>
 
 ### Reflection
