@@ -79,7 +79,6 @@ window.onload = function(){
 
 
 
-// document.body.appendChild(movieContainer)
 
 // LOAD MORE BUTTON
 
@@ -88,15 +87,6 @@ let pageSearch = 2;
 let pageNum = 1;
 let button = document.getElementById('load-more-movies-btn');
 button.addEventListener('click', () => {iterate(searchName.value)})
-
-// iterate()
-// function temp() {
-//     iterate()
-// }
-
-// (name) => {
-//     iterate(name)
-// }
 
 
 function iterate(movieName){
@@ -132,11 +122,6 @@ function iterate(movieName){
     
   
 }
-
-
-
-
-
 
 // SEARCH FUNCTION
 
@@ -199,11 +184,10 @@ const form = document.getElementById('search-form');
 // // adding a submit event listener
 
 
-
 let pageCount = 1; 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    //pageCount += 1; // increaser page number in each click
+    
     logSearch(searchName.value,pageCount);
 });
 
