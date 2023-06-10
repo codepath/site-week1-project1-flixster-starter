@@ -42,12 +42,6 @@ Deployed Application (optional): [Flixster Deployed Site](https://anacambag.gith
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-`<a href="https://www.loom.com/share/11d9432d1a3a418ca9b20110c98a2a75">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/11d9432d1a3a418ca9b20110c98a2a75-with-play.gif">
-  </a>`
-
 <a href="https://www.loom.com/share/11d9432d1a3a418ca9b20110c98a2a75">
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/11d9432d1a3a418ca9b20110c98a2a75-with-play.gif">
   </a>
@@ -60,7 +54,7 @@ Add your response here
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+If I had more time I would have liked to add the dark mode feature as well as a change website language feature to improve web accesibility in other languages and also help with vision impairments.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
@@ -73,3 +67,5 @@ Add your response here
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+I want to give a huge shout out to my cohort mentors: Paige, Sammy and Ashaun. Also, I want to thank my cohort peers: Nara, Maria, Cesar, Khalid, Brian and David for helping me throughout this project.
