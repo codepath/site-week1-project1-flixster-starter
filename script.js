@@ -1,5 +1,6 @@
 API_KEY = "a7985326430d6fbc3cd513d95d89bb20"
-let url = "https://api.themoviedb.org/3/discover/movie?api_key=a7985326430d6fbc3cd513d95d89bb20"
+let url = "https://api.themoviedb.org/3/movie/now_playing?api_key=a7985326430d6fbc3cd513d95d89bb20"
+searchURL = "https://api.themoviedb.org/3/search/movie?api_key=a7985326430d6fbc3cd513d95d89bb20"
 
  //create star
  function generateCards(movieObject) {
@@ -25,6 +26,8 @@ let url = "https://api.themoviedb.org/3/discover/movie?api_key=a7985326430d6fbc3
 let image = document.createElement('img');
 image.src = "https://image.tmdb.org/t/p/w342" + movieObject.poster_path
 //document.body.insertBefore(image, averageContainer);
+
+image.alt = movieObject.poster_path
 
 
 let name = document.createElement('div');
@@ -55,7 +58,7 @@ const options = {
 };
   
 //API 
-fetch('https://api.themoviedb.org/3/discover/movie?api_key=a7985326430d6fbc3cd513d95d89bb20')
+fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=a7985326430d6fbc3cd513d95d89bb20')
 .then(response => response.json())
 .then((data) => {
     for (let i=0; i <data.results.length; i+=1) {
@@ -78,16 +81,45 @@ function morePages () {
  }
  )
  i++;
+ 
+//  form.addEventListener('submit', (e)=>{
+//   e.preventDefault()
+//   const searchValue = search.value
+//   if(searchValue && searchValue !== ''){
+//     getMovies(searchURL+searchValue)
+//     searchValue = ''
+//   }else{
+//     window.location.reload()
+//   }
+// }
+// )
+
  }
 
- //
  window.onload=function(){
   let showMoreButton = document.querySelector("#show-more-button")
   showMoreButton.addEventListener('click', morePages)
 }
 
 
+// form.addEventListener('submit', (e)=>{
+//   e.preventDefault()
+//   const searchValue = search.searchValue
+//   if(searchValue && searchValue !== ''){
+//     getMovies(searchURL+searchValue)
+//     searchValue = ''
+//   }else{
+//     window.location.reload()
+//   }
+// }
+// )
 
 
-
-
+// fetch('https://api.themoviedb.org/3/discover/movie?api_key=a7985326430d6fbc3cd513d95d89bb20')
+// .then(response => response.json())
+// .then((data) => {
+//     for (let i=0; i <data.results.length; i+=1) {
+//         generateCards(data.results[i])
+//     }
+// }
+// )
