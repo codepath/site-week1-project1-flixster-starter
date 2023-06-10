@@ -41,8 +41,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 ### Walkthrough Video
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/E_PaSFGeFDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+[![Watch the video](https://www.youtube.com/watch?v=E_PaSFGeFDM)]
 ### Reflection
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
