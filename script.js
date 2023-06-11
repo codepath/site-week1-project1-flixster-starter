@@ -69,7 +69,7 @@ function generateCard(movieAPI){
     movieContainer.appendChild(movie)
 }
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('keyup', (e) => {
     e.preventDefault()
     searchValue = search.value
     if (searchValue && searchValue !==''){

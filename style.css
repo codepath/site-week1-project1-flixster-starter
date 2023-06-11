@@ -86,15 +86,6 @@ form{
     border: black;
 }
 
-#search-button{
-    height: 50px;
-    border-radius: 10px;
-    margin-left: 5px;
-    background-color: #2a1371;
-    color: white;
-    font: bolder;
-
-}
 #close-search-btn{
     height: 50px;
     width: 50px;
@@ -103,7 +94,7 @@ form{
     color: white;
     font: bolder;
 }
-h1:hover, #load-more-movies-btn:hover, #search-button:hover, #close-search-btn:hover{
+h1:hover, #load-more-movies-btn:hover, #close-search-btn:hover{
     cursor: pointer;
     color:#f9f014;
 }
