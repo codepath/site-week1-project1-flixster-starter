@@ -2,6 +2,11 @@
     box-sizing: border-box;
   }
   
+@font-face {
+  font-family: 'CollegeMovie';
+  src: url(fonts/CollegeMovie.ttf);
+}
+
   body {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: 16px;
@@ -11,10 +16,18 @@
     background-color:darkred;
     color: aliceblue;
   }
+
+  #search-text{
+    font-size: 30px;
+  }
   
   h1 {
     text-transform: uppercase;
     text-align: center;
+    font-family: 'CollegeMovie', sans-serif;
+    letter-spacing: 5px;
+    font-size: 100px;
+    font-weight: lighter;
     margin: 20px 0;
     color: aliceblue;
   }
@@ -51,8 +64,17 @@
     cursor: pointer;
   }
 
+  #bar {
+    box-sizing: border-box;
+  }
+
 
   #search-button:active{
     background-color: bisque;
   }
   
+  #load-button {
+      position: fixed;
+      bottom: 0;
+      right:50%;
+  }
