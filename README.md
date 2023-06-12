@@ -4,7 +4,7 @@
 
 Submitted by: Marley Burrows
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: 15 hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
@@ -12,11 +12,11 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 #### Core Features
 
-- [ ] User can view a list of current movies from The Movie Database API as a grid view
+- [x] User can view a list of current movies from The Movie Database API as a grid view
   - The grid element should have an id of `movies-grid`
   - Each movie wrapper element should have a class of `movie-card`
 
-- [ ] For each movie displayed, user can see the following details:
+- [x] For each movie displayed, user can see the following details:
   - Title - the element should have a class of `movie-title`
   - Image - the `img` element should have a class of `movie-poster`
   - Votes - the element should have a class of `movie-votes`
@@ -44,23 +44,23 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
-`ADD_EMBEDDED_CODE_HERE`
+<a href="https://www.loom.com/share/8b26297f5c244aac899513f249a7f961">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/8b26297f5c244aac899513f249a7f961-with-play.gif">
+  </a>
 
 ### Reflection
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+I felt unprepared to implement the 'load more' and search functions, I felt that after reviewing lecture notes, Lab 3 solutions and the internet I was still struggling to grasp how to solve these issues.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+I would have collaborated more with other interns. With this project, I wanted to work more alone in hopes of finishing completely on my own but I may not be on that level yet.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I think displaying the movies on the site went well, but I didn't get to finish the project in time like I planned to. 
 
 ### Open-source libraries used
 
@@ -69,3 +69,5 @@ Add your response here
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+I enjoyed hammering out little details with Bereket on the labs and the beginning of the project. Instructor Ashaun helped me a lot with getting the API to work!
