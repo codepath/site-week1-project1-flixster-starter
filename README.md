@@ -44,7 +44,6 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 <a href="https://www.loom.com/share/ce9966dcb89f4eb3971372bc4cd178d7">
-    <p>Marley's Flixter - 14 June 2023 - Watch Video</p>
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/ce9966dcb89f4eb3971372bc4cd178d7-with-play.gif">
   </a>
 
