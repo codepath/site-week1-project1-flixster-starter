@@ -1,1 +1,102 @@
+body {
+    background-color: rgb(92, 3, 3);
+}
+#movies-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color:rgb(70, 3, 3);
+    border-radius: 70px;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
 
+    justify-content: space-evenly;
+}
+
+.movie-card {
+    width: 350px;
+    color: whitesmoke;
+    font-size: medium;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+#slay-btn {
+    text-align: center;
+    padding: 10px;
+}
+
+.load-more-movies-btn {
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 70px;
+    width: 125px;
+    height: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 16px;
+
+}
+
+.movie-title{
+    text-align: center;
+    color: whitesmoke;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+}
+
+#search-form {
+    text-align: center;
+    shape-image-threshold: unset;
+    color: black;
+}
+
+#search-input {
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 70px;
+    width: 125px;
+    height: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+#srch-button {
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 70px;
+    width: 150px;
+    height: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#nowpl{
+    color: whitesmoke;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 40px;
+    font-size: larger;
+}
+
+#closebtn{
+    text-align: center;
+    padding-top: 10px;
+    margin: 10px;
+}
+
+#close-search-btn{
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 70px;
+    width: 125px;
+    height: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.movie-poster{
+    border-radius: 20%;
+    
+}
