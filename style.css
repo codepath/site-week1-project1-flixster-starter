@@ -1,1 +1,74 @@
+* {
+  box-sizing: border-box;
+}
 
+@font-face {
+  font-family: 'CollegeMovie';
+  src: url(fonts/CollegeMovie.ttf);
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  background-color: darkred;
+  color: aliceblue;
+}
+
+#search-text {
+  font-size: 30px;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'CollegeMovie', sans-serif;
+  letter-spacing: 5px;
+  font-size: 100px;
+  font-weight: lighter;
+  margin: 20px 0;
+  color: aliceblue;
+}
+
+#search-form {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#search-button {
+  border-radius: 8px;
+  background-color: indianred;
+  cursor: pointer;
+}
+
+.movie-card {
+  display: inline-block;
+  vertical-align: top;
+  padding: auto;
+  margin-bottom: 30px;
+  background-color: maroon;
+  margin-left: 5%;
+  text-align: center;
+}
+
+.movie-poster {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 50%;
+}
+
+#bar {
+  box-sizing: border-box;
+}
+
+#search-button:active {
+  background-color: bisque;
+}
+
+#show-more {
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+}
