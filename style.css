@@ -1,1 +1,87 @@
+body {
+    background-image: linear-gradient(to right, #141e30, #243b55);
+    padding: 10px;
+}
+  
+h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
+h2 {
+    padding-left: 60px;
+    font-size: 30px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+section {
+    color: white;
+} 
+
+#movies-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+}
+
+.averageContainer, .movie-card, .show-more {
+    text-align: center;
+}
+
+.search { 
+    margin: 0 auto;
+    display: block;
+}
+
+form {
+    text-align: center;
+    font-size: 20px;
+    padding-left: 80px;
+
+}
+
+#search-button, #load-more-movies-btn {
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    padding: 20px;
+}
+
+#load-more-movies-btn{
+    margin-top: 30px;
+}
+
+#search-input{
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    width: 500px;
+    height: 50px;
+}
+
+.name {
+    width: 300px;
+
+}
+
+#close-search-btn {
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    padding: 20px;
+}
+
+.movie-card {
+    width: 300px;
+}
