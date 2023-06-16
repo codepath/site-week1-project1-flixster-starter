@@ -1,1 +1,75 @@
+body{
+    background-color: black;
+}
 
+.website-header { 
+    text-align: center;
+    color: white;
+}
+
+.search-container{
+    display: inline-flex;
+    width:100%;
+    justify-content: center;
+}
+
+#search-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#close-search{
+    text-align: center;
+}
+
+#movies-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    gap: 40px;
+}
+
+.movie-card{
+    background-color: black;
+    
+
+}
+
+.avg{
+    font-size: 20px;
+}
+
+
+.star{
+    padding-right: 10px;
+}
+
+
+
+.movie-votes{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-poster{
+    text-align: center;
+    border-radius: 10%;
+}
+
+.movie-title{
+    color: white;
+    text-align: center;
+    word-wrap: break-word; 
+    width: 300px; 
+    font-size: 25px;
+}
+
+#more-btn{
+    text-align: center;
+
+}
