@@ -6,8 +6,7 @@ Submitted by: **Pelumi Tayo-Orisadare**
 
 Estimated time spent: **27** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](https://pelumitayo.github.io/flixster)
-
+Deployed Application (optional): Flixster deployed website: https://pelumitayo.github.io/Flixster/
 ### Application Features
 
 #### Core Features
