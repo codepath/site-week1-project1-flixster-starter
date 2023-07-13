@@ -1,1 +1,100 @@
+body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(203,7,7,1) 100%, rgba(0,212,255,1) 100%);
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+}
 
+h1{
+    margin-left: 100px;
+    text-align: center;
+    font-size: 100px;
+    height: 70px;
+}
+
+h1, .star, .movie-votes, .movie-title, #now-playing, label{
+    color: white;
+}
+
+#movies-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+
+.average, .movie-title {
+    margin-left: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#now-playing{
+    font-size: 50px;
+}
+
+#button-div{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.movie-poster{
+    border-radius: 10%;
+    width: 380px;
+    height: 550px;
+    filter: drop-shadow(30px 10px 4px #020110);
+    background-color: black;
+}
+.movie-card{
+    width: 250px;
+}
+
+.movie-card:hover{
+    z-index: 2;
+    filter: drop-shadow(30px 10px 4px #f9f014);
+    width: 270px;
+    transition: .5s;
+}
+.average {
+    margin-top: 10px;
+}
+#load-more-movies-btn{
+    border-radius: 25px;
+    background-color: #2a1371;
+    color: white;
+    font-size: 15px;
+    font: bolder;
+    height: 40px;
+    width: 110px;
+    margin-left: 100px;
+}
+
+label{
+    font-size: 22px;
+}
+form{
+    text-align: center;
+    margin-left: 160px;
+}
+#search-input{
+    padding: 7px;
+    font-size: larger;
+    width: 190px;
+    height: 30px;
+    border-radius: 10px 100px / 120px;
+    border: black;
+}
+
+#close-search-btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #2a1371;
+    color: white;
+    font: bolder;
+}
+h1:hover, #load-more-movies-btn:hover, #close-search-btn:hover{
+    cursor: pointer;
+    color:#f9f014;
+}
